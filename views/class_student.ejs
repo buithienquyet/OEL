@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <%- include('./partial/head.ejs')%>
+
+        <style>
+            .courses-area.section-gap {
+                background-color: #37b3c5;
+            }
+            
+            .courses-area.section-gap h1 {
+                margin: 5px;
+            }
+            
+            header {
+                background: rgb(0, 0, 0, 1) !important;
+                transition: all 0.5;
+            }
+            
+            .menu-active>a {
+                color: #39cfca !important;
+            }
+            
+            .nav.flex-column li.active {
+                background: #2b3035;
+            }
+            
+            .card-body {
+                margin: 20px 0px;
+                background: #38c5c8;
+                border-radius: 15px;
+                color: white;
+            }
+            
+            .modal-lg {
+                max-width: 80% !important;
+            }
+            
+            .main-content>h3 {
+                text-align: center;
+            }
+            
+            * {
+                box-sizing: border-box
+            }
+            /* Style the tab */
+            
+            .tab {
+                float: left;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+                width: 15%;
+            }
+            /* Style the buttons that are used to open the tab content */
+            
+            .tab button {
+                display: block;
+                background-color: inherit;
+                color: black;
+                padding: 22px 16px;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: left;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            /* Change background color of buttons on hover */
+            
+            .tab button:hover {
+                background-color: #ddd;
+            }
+            /* Create an active/current "tab button" class */
+            
+            .tab button.active {
+                background-color: #ccc;
+            }
+            /* Style the tab content */
+            
+            .tabcontent {
+                float: left;
+                padding: 15px;
+                border: 1px solid #ccc;
+                width: 85%;
+                border-left: none;
+            }
+            
+            .tab_document_view_doc {
+                padding: 20px;
+            }
+            
+            .tab_document_view_doc p {
+                text-align: justify;
+            }
+            
+            .tab_document_view_doc h3,
+            h4 {
+                text-align: center;
+                margin: 7px;
+            }
+            
+            .tab_document_view_doc h3 {
+                font-size: 25px;
+            }
+            
+            .tab_document_view_doc h4 {
+                font-size: 18px;
+                font-weight: normal;
+            }
+        </style>
+</head>
+
+<body>
+
+    <!-- Start Header Area -->
+    <%- include('./partial/header.ejs')%>
+        <!-- End Header Area -->
+
+        <div class="container-fluid" style="padding-top: 59px; ">
+            <div class="row">
+
+
+                <div class="tab">
+                    <button class="tablinks active" data-tab-link-name="document" onclick="changeTab('document', 'document_list')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>                                    Bài học </button>
+                    <button class="tablinks" data-tab-link-name="exercise" onclick="changeTab('exercise', 'exercise_list')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>                                    Bài tập
+                        </button>
+                </div>
+
+                <div data-tab-name="document_list" class="tabcontent main-content">
+                    <h3>
+                        <%=classData.name%>
+                    </h3>
+                    <div id="divDocumentList">
+
+                    </div>
+                </div>
+
+                <div data-tab-name="document_view_doc" style="display: none; " class="tab_document_view_doc tabcontent">
+                    <h3></h3>
+                    <h4></h4>
+                    <p></p>
+                </div>
+
+                <div data-tab-name="exercise_list" style="display: none" class="tabcontent">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p>
+                </div>
+
+                <!-- 
+                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky" style="padding-top: 100px; ">
+                        <ul class="nav flex-column" style="margin-bottom: 25px">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>                                    Bài học </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>                                    Bài tập
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main role="main" class="main-content col-md-9 ml-sm-auto col-lg-10 px-4" style="padding-top: 100px; ">
+                    <h3>
+                        <%=classData.name%>
+                    </h3>
+                    <div id="divDocumentList">
+
+                    </div>
+                </main> -->
+            </div>
+        </div>
+
+
+
+        <%- include('./partial/footer.ejs')%>
+            <!-- <script src="/plugins/ckeditor/ckeditor.js"></script> -->
+            <script>
+                var pageInfo = {
+                    classId: '<%= classData._id %>',
+                    role: '<%= role %>'
+                };
+            </script>
+
+            <script src="/javascripts/class_student.js"></script>
+
+</body>
+
+</html

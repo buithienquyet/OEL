@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <%- include('./partial/head.ejs')%>
+
+        <style>
+            .courses-area.section-gap {
+                background-color: #37b3c5;
+            }
+            
+            .courses-area.section-gap h1 {
+                margin: 5px;
+            }
+            
+            header {
+                background: rgb(0, 0, 0, 1) !important;
+                transition: all 0.5;
+            }
+            
+            .menu-active>a {
+                color: #39cfca !important;
+            }
+            
+            .nav.flex-column li.active {
+                background: #2b3035;
+            }
+            
+            .card-body {
+                margin: 20px 0px;
+                background: #38c5c8;
+                border-radius: 15px;
+                color: white;
+            }
+            
+            .modal-lg {
+                max-width: 80% !important;
+            }
+            
+            .main-content>h3 {
+                text-align: center;
+            }
+        </style>
+</head>
+
+<body>
+
+    <!-- Start Header Area -->
+    <%- include('./partial/header.ejs')%>
+        <!-- End Header Area -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky" style="padding-top: 100px; ">
+                        <ul class="nav flex-column" style="margin-bottom: 25px">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>                                    Bài học </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>                                    Bài tập
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>                                    Thiết đặt
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main role="main" class="main-content col-md-9 ml-sm-auto col-lg-10 px-4" style="padding-top: 100px; ">
+                    <h3>
+                        <%=classData.name%>
+                    </h3>
+                    <button id="btnAddDoc" class="btn btn-primary">Thêm bài học</button>
+                    <div id="divDocumentList">
+
+                    </div>
+                </main>
+            </div>
+        </div>
+
+
+        <div id="mdAddDocument" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div style="width: 80%" class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thêm bài học</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="mdAddDocumenttxtDocId" value="">
+                        <div class="form-group">
+                            <label for="">Tiêu đề</label>
+                            <input id="mdAddDocumenttxtName" type="text" class="form-control" id="" aria-describedby="" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mô tả</label>
+                            <input id="mdAddDocumenttxtDes" type="text" class="form-control" id="" aria-describedby="" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nội dung</label>
+                            <textarea type="text" class="form-control" id="txtDocContent" aria-describedby="" placeholder=""> </textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="mdAddDocumentbtnEdit" type="button" class="btn btn-primary">Lưu thay đổi</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <%- include('./partial/footer.ejs')%>
+            <script src="/plugins/ckeditor/ckeditor.js"></script>
+            <script>
+                var pageInfo = {
+                    classId: '<%= classData._id %>',
+                    role: '<%= role %>'
+                };
+            </script>
+
+            <script src="/javascripts/class_teacher.js"></script>
+
+</body>
+
+</html
