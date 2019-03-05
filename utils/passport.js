@@ -19,11 +19,12 @@ passport.use(new LocalStrategy({
 ));
 
 passport.serializeUser(function(user, done) {
-    done(null, user._id);
+    done(null, user);
 });
 
-passport.deserializeUser(function(_id, done) {
-    User.findById(_id, function(err, user) {
-        done(err, user);
-    });
+passport.deserializeUser(function(user, done) {
+    // User.findById(_id, function(err, user) {
+    //     done(err, user);
+    // });
+    done(null, user);
 });

@@ -16,6 +16,7 @@ var usersRouter = require('./routes/users');
 var classesRouter = require('./routes/classes');
 var documentRouter = require('./routes/documents');
 var excercisesRouter = require('./routes/exercises');
+var answerSheetRouter = require('./routes/answer-sheets');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,7 +43,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/classes', checkLogined, classesRouter);
 app.use('/documents', checkLogined, documentRouter);
-app.use('/excercises', checkLogined, excercisesRouter);
+app.use('/exercises', checkLogined, excercisesRouter);
+app.use('/answer-sheets', checkLogined, answerSheetRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 

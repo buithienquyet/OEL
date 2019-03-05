@@ -26,30 +26,82 @@ router.post('/', upload.array('files', 12), async function(req, res, next) {
     let result = { status: 200 };
 
     try {
-
         switch (req.body.exerciseType) {
             case constants.EXERCISE.TYPE.LISTEN_AND_REWRITE:
                 {
-                    let exer = new Exercise();
-                    exer.createdDate = new Date();
-                    exer.updatedDate = exer.createdDate;
-                    exer.createdBy = req.user._id;
-                    exer.name = req.body.name;
-                    exer.description = req.body.description;
-                    exer.classId = req.body.classId;
-                    exer.type = req.body.exerciseType;
+                    let exer;
 
-                    let content = [];
+                    if (req.body.id) {
 
-                    for (let i = 0; i < req.body.texts.length; i++) {
-                        content.push({
-                            text: req.body.texts[i],
-                            audio: req.files[i].filename,
-                            audioId: uuid()
+                        exer = await Exercise.findById(req.body.id);
+                        exer.updatedDate = new Date();
+                        exer.name = req.body.name;
+                        exer.description = req.body.description;
+
+                        exer.content = exer.content.filter(function(e) {
+                            let exist = false;
+
+                            for (let item of req.body.audioIds) {
+                                if (e.audioId == item)
+                                    exist = true;
+                            }
+                            return exist;
                         });
-                    }
 
-                    exer.content = content;
+
+                        let fileIdx = 0;
+
+                        for (let i = 0; i < req.body.texts.length; i++) {
+
+                            let exist = false;
+
+                            for (let j = 0; j < exer.content.length; j++) {
+                                let item = exer.content[j];
+                                if (item.audioId == req.body.audioIds[i]) {
+                                    item.text = req.body.texts[i];
+                                    if (req.body.hasFiles[i] == true) {
+                                        item.audio = req.files[fileIdx].filename;
+                                        fileIdx++;
+                                    }
+                                    exist = true;
+                                    break;
+                                }
+                            }
+
+                            if (!exist) {
+                                exer.content.push({
+                                    text: req.body.texts[i],
+                                    audio: req.files[i].filename,
+                                    audioId: uuid()
+                                });
+                                fileIdx++;
+                            }
+                        }
+
+
+                    } else {
+                        exer = new Exercise();
+
+                        exer.createdDate = new Date();
+                        exer.updatedDate = exer.createdDate;
+                        exer.createdBy = req.user._id;
+                        exer.name = req.body.name;
+                        exer.description = req.body.description;
+                        exer.classId = req.body.classId;
+                        exer.type = req.body.exerciseType;
+
+                        let content = [];
+
+                        for (let i = 0; i < req.body.texts.length; i++) {
+                            content.push({
+                                text: req.body.texts[i],
+                                audio: req.files[i].filename,
+                                audioId: uuid()
+                            });
+                        }
+
+                        exer.content = content;
+                    }
 
                     await exer.save();
 
@@ -111,7 +163,7 @@ router.get('/', async function(req, res) {
 
         //  if (role == constants.CLASS.ROLE.TEACHER)
         //        result = await Document.find({ classId: classId, createdBy: req.user._id }).sort({ createdDate: -1 });
-        result = await Document.find({ classId: classId }).sort({ createdDate: -1 });
+        result = await Exercise.find({ classId: classId }).sort({ createdDate: -1 });
         data.data = result;
         //res.render('class', dataToRender);
 
