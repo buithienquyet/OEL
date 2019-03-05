@@ -1,0 +1,9 @@
+{ 
+    "_id" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "name" : "Tiếng anh vỡ lòng 1", 
+    "index" : "", 
+    "createdDate" : "", 
+    "createdBy" : "5c74391e55cd132410c04153", 
+    "updatedDate" : "", 
+    "type" : "public"
+}

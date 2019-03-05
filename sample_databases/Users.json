@@ -1,0 +1,20 @@
+{ 
+    "_id" : ObjectId("5c74391e55cd132410c04153"), 
+    "userName" : "btq", 
+    "firstName" : "Quyet", 
+    "lastName" : "Bui", 
+    "phoneNumber" : "0399876304", 
+    "password" : "$2b$10$9ykvfxf.KCI.iL6U3ceyOedM4dh2eWQUzXGuWuZl8.Giai.QXBtb.", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "userName" : "ngocthien", 
+    "password" : "$2b$10$9ykvfxf.KCI.iL6U3ceyOedM4dh2eWQUzXGuWuZl8.Giai.QXBtb.", 
+    "firstName" : "Thiện", 
+    "email" : "ngocjthien@gmail.com", 
+    "address" : "Tân Lac-Hòa Bình", 
+    "createdDate" : ISODate("2019-02-26T20:57:13.656+0000"), 
+    "__v" : NumberInt(0), 
+    "lastName" : "Ngọc"
+}

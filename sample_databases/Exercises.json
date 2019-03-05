@@ -1,0 +1,28 @@
+{ 
+    "_id" : ObjectId("5c7d50951526a619504784d4"), 
+    "createdDate" : ISODate("2019-03-04T16:21:41.737+0000"), 
+    "updatedDate" : ISODate("2019-03-04T16:21:41.737+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "name" : "asdasd", 
+    "description" : "ssss", 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "type" : "LISTEN_AND_REWRITE", 
+    "content" : [
+        {
+            "text" : "a", 
+            "audio" : "98452ee0-3e99-11e9-8d98-833e4f9dfbee.wav", 
+            "audioId" : "9849e9d0-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "b", 
+            "audio" : "9845f230-3e99-11e9-8d98-833e4f9dfbee.wav", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "c", 
+            "audio" : "98466760-3e99-11e9-8d98-833e4f9dfbee.WAV", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
