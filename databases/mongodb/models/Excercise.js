@@ -6,10 +6,9 @@ schema = new Schema({
         type: String,
         required: true,
     },
-    index: String,
-    students: Array,
     description: String,
     createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
+    classId: { type: Schema.Types.ObjectId, ref: 'Class' },
     updatedDate: Date,
     createdDate: Date,
     isBeingDeleted: Boolean,
@@ -17,9 +16,11 @@ schema = new Schema({
     type: {
         type: String,
         required: true,
-    }
+    },
+    allowRedo: Boolean,
+    content: Object
 });
 
-const Class = mongoose.model('Class', schema, 'Classes');
+const Exercise = mongoose.model('Exercise', schema, 'Exercises');
 
-module.exports = Class;
+module.exports = Exercise;

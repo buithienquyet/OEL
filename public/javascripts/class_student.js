@@ -45,7 +45,7 @@ function getDocumentList() {
                 let content = `       
                             <h5 class="card-title">${item.name}</h5>
                             <p class="card-text">${item.description}</p>
-                            <button class="btn btn-primary view-document">Xem ngay</button>           
+                            <button class="btn btn-default view-document">Xem ngay</button>           
                             `;
                 divWrapper.innerHTML = content;
 
@@ -114,28 +114,6 @@ function configEditDocument() {
         edit();
     });
 }
-
-function changeTab(tabLink, tabName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = ($(tabcontent[i]).data('tab-name') == tabName ? "block" : "none");
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        if ($(tablinks[i].className).data('tab-link-name') != tabLink)
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        else
-            tablinks[i].addClass('active');
-    }
-
-}
-
 
 $(document).ready(function() {
     //   initCK();

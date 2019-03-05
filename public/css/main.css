@@ -4156,5 +4156,43 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
+.listen-and-rewrite-box {
+    padding: 15px;
+}
 
-/*# sourceMappingURL=main.css.map */
+.listen-and-rewrite-box div {
+    border-radius: 15px;
+    background: #e9e9e9;
+    padding: 15px
+}
+
+.listen-and-rewrite-box-done div {
+    background: #38c5c8;
+}
+
+.listen-and-rewrite-box-wrong div {
+    background: #ff7070;
+}
+
+.listen-and-rewrite-box-correct div {
+    background: #75ffa3;
+}
+
+.modaltabcontent {
+    float: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 85%;
+}
+
+.modaltab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 15%;
+}
+
+.div_edit_exer_listen_and_rewrite .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

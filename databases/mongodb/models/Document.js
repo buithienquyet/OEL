@@ -20,10 +20,6 @@ schema = new Schema({
     content: String
 });
 
-schema.methods.isValidPassword = function(a) {
-    return this.password == a
-}
-
 const Class = mongoose.model('Document', schema, 'Documents');
 
 module.exports = Class;

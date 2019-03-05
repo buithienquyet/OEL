@@ -8,8 +8,9 @@ passport.use(new LocalStrategy({
     },
     function(username, password, done) {
         User.findOne({ userName: username }, function(err, user) {
-            if (err) { return done(err); }
-            if (!user.isValidPassword(password)) {
+            if (err || !user) {
+                return done(err);
+            } else if (!user.isValidPassword(password)) {
                 return done(null, false, { message: 'Incorrect password.' });
             }
             return done(null, user);
