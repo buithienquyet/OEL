@@ -1,18 +1,13 @@
 { 
     "_id" : ObjectId("5c7d50951526a619504784d4"), 
     "createdDate" : ISODate("2019-03-04T16:21:41.737+0000"), 
-    "updatedDate" : ISODate("2019-03-04T16:21:41.737+0000"), 
+    "updatedDate" : ISODate("2019-03-07T00:46:05.307+0000"), 
     "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
-    "name" : "asdasd", 
-    "description" : "ssss", 
+    "name" : "Bài tập cho phần danh từ", 
+    "description" : "Bài tập loại nghe và điền lại", 
     "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
     "type" : "LISTEN_AND_REWRITE", 
     "content" : [
-        {
-            "text" : "a", 
-            "audio" : "98452ee0-3e99-11e9-8d98-833e4f9dfbee.wav", 
-            "audioId" : "9849e9d0-3e99-11e9-8d98-833e4f9dfbee"
-        }, 
         {
             "text" : "b", 
             "audio" : "9845f230-3e99-11e9-8d98-833e4f9dfbee.wav", 
@@ -22,6 +17,34 @@
             "text" : "c", 
             "audio" : "98466760-3e99-11e9-8d98-833e4f9dfbee.WAV", 
             "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("5c806b5bbed2bb2f6c57cef2"), 
+    "createdDate" : ISODate("2019-03-07T00:52:43.657+0000"), 
+    "updatedDate" : ISODate("2019-03-07T00:52:43.657+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "name" : "Bài tập phần danh từ", 
+    "description" : "Loại: Nghe và điền từ", 
+    "classId" : ObjectId("5c806574dd0c960c3084b296"), 
+    "type" : "LISTEN_AND_REWRITE", 
+    "content" : [
+        {
+            "text" : "door", 
+            "audio" : "50fe2380-4073-11e9-8ece-7d9559d8bab8.wav", 
+            "audioId" : "510b1bd0-4073-11e9-8ece-7d9559d8bab8"
+        }, 
+        {
+            "text" : "house", 
+            "audio" : "50ff34f0-4073-11e9-8ece-7d9559d8bab8.wav", 
+            "audioId" : "510b1bd1-4073-11e9-8ece-7d9559d8bab8"
+        }, 
+        {
+            "text" : "table", 
+            "audio" : "5100e2a0-4073-11e9-8ece-7d9559d8bab8.wav", 
+            "audioId" : "510b1bd2-4073-11e9-8ece-7d9559d8bab8"
         }
     ], 
     "__v" : NumberInt(0)

@@ -30,7 +30,7 @@
                         <div class="courses-right">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <ul class="courses-list">
+                                    <ul class="courses-list student-list">
                                         <li>
                                             <a class="wow fadeInLeft" href="courses.html" data-wow-duration="1s" data-wow-delay=".1s">
                                                 <i class="fa fa-book"></i> Tiếng anh cơ bản 1
@@ -76,7 +76,7 @@
                         <div class="courses-right">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <ul class="courses-list">
+                                    <ul class="courses-list teacher-list">
                                         <li>
                                             <a class="wow fadeInLeft" href="courses.html" data-wow-duration="1s" data-wow-delay=".1s">
                                                 <i class="fa fa-book"></i> Tiếng anh cơ bản 1
@@ -121,8 +121,65 @@
         </section>
 
 
+
         <%- include('./partial/footer.ejs')%>
 
+            <script>
+                var userInfo = {
+                    id: '<%= user._id %>',
+                };
+            </script>
+
+            <script>
+                $.ajax({
+                    type: "GET",
+                    url: '/classes/list',
+                    success: function(data) {
+                        if (data.status && data.status == 200) {
+
+                            let students = [];
+                            let teachers = [];
+
+                            for (let item of data.data) {
+                                if (item.createdBy == userInfo.id)
+                                    teachers.push(item);
+                                else
+                                    students.push(item);
+                            }
+
+                            $('.student-list').html('');
+                            $('.teacher-list').html('');
+
+                            for (let item of students) {
+
+                                $('.student-list').append(`
+                                <li>
+                                            <a class="wow fadeInLeft" href="/classes/${item._id}" data-wow-duration="1s" data-wow-delay=".1s">
+                                                <i class="fa fa-book"></i> ${item.name}
+                                            </a>
+                                        </li>`);
+                            }
+
+                            for (let item of teachers) {
+                                $('.teacher-list').append(`
+                                <li>
+                                            <a class="wow fadeInLeft" href="/classes/${item._id}" data-wow-duration="1s" data-wow-delay=".1s">
+                                                <i class="fa fa-book"></i> ${item.name}
+                                            </a>
+                                        </li>`);
+                            }
+
+                            // $('#mdAddDocument').modal('hide');
+                        } else {
+                            toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                        }
+                    },
+                    error: function() {
+                        toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                    },
+                    dataType: 'json'
+                });
+            </script>
 </body>
 
 </html

@@ -1,0 +1,308 @@
+{ 
+    "_id" : ObjectId("5c7eda0b70ef5c2d84e6ca40"), 
+    "createdDate" : ISODate("2019-03-05T20:20:27.990+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:20:27.990+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edbcd748d9d352c7029ec"), 
+    "createdDate" : ISODate("2019-03-05T20:27:57.665+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:27:57.665+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edc264db6873794f9ebe1"), 
+    "createdDate" : ISODate("2019-03-05T20:29:26.778+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:29:26.778+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edd406739fe3ffcda6141"), 
+    "createdDate" : ISODate("2019-03-05T20:34:08.778+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:34:08.778+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "d", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edd446739fe3ffcda6142"), 
+    "createdDate" : ISODate("2019-03-05T20:34:12.893+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:34:12.893+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "d", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7ede636739fe3ffcda6143"), 
+    "createdDate" : ISODate("2019-03-05T20:38:59.611+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:38:59.611+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7ede986739fe3ffcda6144"), 
+    "createdDate" : ISODate("2019-03-05T20:39:52.075+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:39:52.075+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edeb16739fe3ffcda6145"), 
+    "createdDate" : ISODate("2019-03-05T20:40:17.938+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:40:17.938+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edeee6739fe3ffcda6146"), 
+    "createdDate" : ISODate("2019-03-05T20:41:18.981+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:41:18.981+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edf276739fe3ffcda6147"), 
+    "createdDate" : ISODate("2019-03-05T20:42:15.781+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:42:15.781+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "c", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edf516739fe3ffcda6148"), 
+    "createdDate" : ISODate("2019-03-05T20:42:57.686+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:42:57.686+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edf686739fe3ffcda6149"), 
+    "createdDate" : ISODate("2019-03-05T20:43:20.608+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:43:20.608+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "c", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7edf816739fe3ffcda614a"), 
+    "createdDate" : ISODate("2019-03-05T20:43:45.687+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:43:45.687+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7ee03f6739fe3ffcda614b"), 
+    "createdDate" : ISODate("2019-03-05T20:46:55.585+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:46:55.585+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "c", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c7ee0738133b233ec256415"), 
+    "createdDate" : ISODate("2019-03-05T20:47:47.992+0000"), 
+    "updatedDate" : ISODate("2019-03-05T20:47:47.992+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "a", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c806b80bed2bb2f6c57cef3"), 
+    "createdDate" : ISODate("2019-03-07T00:53:20.521+0000"), 
+    "updatedDate" : ISODate("2019-03-07T00:53:20.521+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c806b5bbed2bb2f6c57cef2"), 
+    "classId" : ObjectId("5c806574dd0c960c3084b296"), 
+    "content" : [
+        {
+            "text" : "door", 
+            "audioId" : "510b1bd0-4073-11e9-8ece-7d9559d8bab8"
+        }, 
+        {
+            "text" : "house", 
+            "audioId" : "510b1bd1-4073-11e9-8ece-7d9559d8bab8"
+        }, 
+        {
+            "text" : "table", 
+            "audioId" : "510b1bd2-4073-11e9-8ece-7d9559d8bab8"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}

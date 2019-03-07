@@ -7,3 +7,33 @@
     "updatedDate" : "", 
     "type" : "public"
 }
+{ 
+    "_id" : ObjectId("5c806574dd0c960c3084b296"), 
+    "name" : "Tiếng anh cơ bản 1", 
+    "type" : "public", 
+    "createdBy" : "5c74391e55cd132410c04153"
+}
+{ 
+    "_id" : ObjectId("5c806588dd0c960c3084b299"), 
+    "name" : "Tiếng anh cơ bản 2", 
+    "type" : "public", 
+    "createdBy" : "5c75a829f9d44131c4c045c0"
+}
+{ 
+    "_id" : ObjectId("5c8065a5dd0c960c3084b29c"), 
+    "name" : "Tiếng anh tiểu học 1", 
+    "type" : "public", 
+    "createdBy" : "5c75a829f9d44131c4c045c0"
+}
+{ 
+    "_id" : ObjectId("5c8065eadd0c960c3084b2b0"), 
+    "name" : "Tiếng anh vỡ lòng 2", 
+    "createdBy" : "5c74391e55cd132410c04153", 
+    "type" : "public"
+}
+{ 
+    "_id" : ObjectId("5c806e9fdd0c960c3084b2b8"), 
+    "name" : "Tiếng anh chuyên ngành", 
+    "createdBy" : "5c75a829f9d44131c4c045c0", 
+    "type" : "public"
+}

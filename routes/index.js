@@ -3,10 +3,14 @@ var router = express.Router();
 var passport = require('passport');
 const bcrypt = require('bcrypt');
 const User = require('../databases/mongodb/models/User');
+const Class = require('../databases/mongodb/models/Class');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { user: req.user });
+router.get('/', async function(req, res, next) {
+
+    let result = await Class.find({ type: 'public' });
+
+    res.render('index', { user: req.user, classes: result });
 });
 
 router.post('/login',

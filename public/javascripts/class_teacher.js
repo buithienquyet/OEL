@@ -263,7 +263,8 @@ function configEditExerListenAndRewrite() {
             formData.append('files', file);
         }
 
-        formData.append('id', mainDiv.data('exercise')._id);
+        if (mainDiv.data('exercise'))
+            formData.append('id', mainDiv.data('exercise')._id);
         formData.append('classId', pageInfo.classId);
         formData.append('name', name);
         formData.append('exerciseType', 'LISTEN_AND_REWRITE');

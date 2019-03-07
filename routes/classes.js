@@ -8,6 +8,24 @@ router.get('/', function(req, res, next) {
     res.render('classes', { user: req.user });
 });
 
+router.get('/list', async function(req, res, next) {
+    let data = { status: 200 };
+    try {
+        let result = await Class.find({
+            $or: [
+                { 'type': 'public' },
+                { 'createdBy': req.user._id }
+            ]
+        })
+        data.data = result;
+    } catch (e) {
+        console.log(e);
+        data.status = 500;
+    } finally {
+        res.json(data);
+    }
+});
+
 router.get('/:id', async function(req, res) {
 
     dataToRender = { user: req.user, role: constants.CLASS.ROLE.STUDENT };
