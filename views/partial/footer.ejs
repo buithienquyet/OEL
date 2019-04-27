@@ -15,7 +15,8 @@
                 <p>Luôn luôn nhận thông tin mới nhất qua email,</p>
                 <div class="form-wrap" id="mc_embed_signup">
                     <form target="_blank" action="" method="get" class="form-inline">
-                        <input class="form-control" name="EMAIL" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required="" type="email">
+                        <input class="form-control" name="EMAIL" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"
+                            required="" type="email">
                         <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
                         <div style="position: absolute; left: -5000px;">
                             <input name="" tabindex="-1" value="" type="text">
@@ -30,7 +31,8 @@
         <div class="footer-bottom row align-items-center" style="margin-top: 0px">
             <p class="footer-text m-0 col-lg-8 col-md-12">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright © 2019 All rights reserved | This is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">BTQ</a>
+                Copyright © 2019 All rights reserved | This is made with <i class="fa fa-heart-o" aria-hidden="true"></i>
+                by <a href="" target="_blank">BTQ</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             <div class="col-lg-4 col-md-12 footer-social">
@@ -50,8 +52,50 @@
 
 <script src="/js/vendor/jquery.min.js"></script>
 <script src="/js/vendor/popper.js"></script>
-<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- <script
+			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+              crossorigin="anonymous"></script> -->
+
+<script>
+    $.fn.modal.Constructor.prototype.enforceFocus = function () {
+        var $modalElement = this.$element;
+        $(document).on('focusin.modal', function (e) {
+            var $parent = $(e.target.parentNode);
+            if ($modalElement[0] !== e.target
+                && !$modalElement.has(e.target).length
+                && $(e.target).parentsUntil('*[role="dialog"]').length === 0) {
+                $modalElement.focus();
+            }
+        });
+    };
+</script>
+
 <script src="/js/vendor/toastr.js"></script>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "6000",
+        "extendedTimeOut": "6000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
+</script>
+<script src="/js/vendor/bootstrap-toggle.min.js"></script>
 <script src="/js/main.js"></script>
 
 <!-- <script src="js/vendor/jquery-2.2.4.min.js"></script>

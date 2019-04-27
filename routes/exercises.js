@@ -1,11 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const Document = require('./../databases/mongodb/models/Document');
 const Exercise = require('./../databases/mongodb/models/Excercise');
 const constants = require('./../utils/constants');
 const multer = require('multer');
 const path = require('path');
 const uuid = require('uuid/v1');
+const cheerio = require('cheerio');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -19,8 +20,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage, limits: { fileSize: 50000000 } });
 
 router.post('/', upload.array('files', 12), async function(req, res, next) {
-
-    console.log(req.files);
     console.log(req.body);
 
     let result = { status: 200 };
@@ -59,7 +58,7 @@ router.post('/', upload.array('files', 12), async function(req, res, next) {
                                 let item = exer.content[j];
                                 if (item.audioId == req.body.audioIds[i]) {
                                     item.text = req.body.texts[i];
-                                    if (req.body.hasFiles[i] == true) {
+                                    if (req.body.hasFiles[i] == "true") {
                                         item.audio = req.files[fileIdx].filename;
                                         fileIdx++;
                                     }
@@ -107,49 +106,107 @@ router.post('/', upload.array('files', 12), async function(req, res, next) {
 
                     return;
                 }
+            case constants.EXERCISE.TYPE.FILL_MISSING_WORDS:{
+                let exer;
+
+                if (req.body.id) {
+
+                    exer = await Exercise.findById(req.body.id);
+                    exer.updatedDate = new Date();
+                    exer.name = req.body.name;
+                    exer.description = req.body.description;
+
+                    exer.content = {
+                        paragraph : '',
+                        texts: ''
+                    }
+                                           
+                    const $ = cheerio.load(req.body.paragraph);
+
+                    const inputs = $('input[type="text"]').toArray();
+                    const texts = [];
+                    
+                    for (let input of inputs)
+                    {
+                        input = $(input);
+                        const text = input.data('text');
+                        let textId = input.data('textid');
+
+                        if (!textId)
+                        {
+                            textId = uuid();
+                            input.attr('data-textid', textId);
+                        }
+
+                        texts.push({
+                            text: text,
+                            textId: textId
+                        });   
+                        
+                        input.removeAttr('data-text');                     
+                    }
+                    
+                    exer.content.paragraph = $.root().html();
+                    exer.content.texts = texts;
+
+                } else {
+                    exer = new Exercise();
+
+                    exer.createdDate = new Date();
+                    exer.updatedDate = exer.createdDate;
+                    exer.createdBy = req.user._id;
+                    exer.name = req.body.name;
+                    exer.description = req.body.description;
+                    exer.classId = req.body.classId;
+                    exer.type = req.body.exerciseType;
+
+                    exer.updatedDate = new Date();
+                    exer.name = req.body.name;
+                    exer.description = req.body.description;
+
+                    exer.content = {
+                        paragraph : '',
+                        texts: ''
+                    }
+                    
+                    const $ = cheerio.load(req.body.paragraph);
+
+                    const inputs = $('input[type="text"]').toArray();
+                    const texts = [];
+                    
+                    for (let input of inputs)
+                    {
+                        input = $(input);
+                        const text = input.data('text');
+                        const textId = uuid();
+
+                        texts.push({
+                            text: text,
+                            textId: textId
+                        });   
+                        
+                        input.removeAttr('data-text');
+                        input.attr('data-textid', textId);
+                    }
+                    
+                    exer.content.paragraph = $.root().html();
+                    exer.content.texts = texts;
+                }
+
+                await exer.save();
+
+                return;
+            }
+            default: {
+                throw new Error('Cannot find excercise type');
+            }
         }
     } catch (e) {
-
         console.log(e);
         result.status = 500;
     } finally {
         res.json(result);
-    }
-
-    // let result = { status: '200' };  
-
-    // try {
-    //     let data = req.body;
-    //     let doc = null;
-
-    //     if (!data.id) {
-    //         doc = new Document();
-    //         doc.createdDate = new Date();
-    //         doc.updatedDate = doc.createdDate;
-    //         doc.createdBy = req.user._id;
-    //         doc.name = data.name;
-    //         doc.description = data.description;
-    //         doc.content = data.content;
-    //         doc.classId = data.classId;
-    //         doc.type = 'normal';
-    //     } else {
-    //         doc = await Document.findById(data.id);
-    //         doc.updatedDate = new Date();
-    //         doc.name = data.name;
-    //         doc.description = data.description;
-    //         doc.content = data.content;
-    //         doc.classId = data.classId;
-    //         doc.type = 'normal';
-    //     }
-
-    //     await doc.save();
-    // } catch (e) {
-    //     result.status = 500;
-    //     console.log(e);
-    // } finally {
-    //     res.json(result);
-    // }
-
+    }   
 });
 
 router.get('/', async function(req, res) {

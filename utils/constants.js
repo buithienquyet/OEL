@@ -11,7 +11,8 @@ module.exports = {
     },
     EXERCISE: {
         TYPE: {
-            LISTEN_AND_REWRITE: 'LISTEN_AND_REWRITE'
+            LISTEN_AND_REWRITE: 'LISTEN_AND_REWRITE',
+            FILL_MISSING_WORDS: 'FILL_MISSING_WORDS'
         }
     }
 }

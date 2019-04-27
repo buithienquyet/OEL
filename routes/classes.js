@@ -52,4 +52,26 @@ router.get('/:id', async function(req, res) {
     }
 });
 
+router.post('/', async function(req, res, next){
+    let data = { status: 200 };
+    try {
+        const body = req.body;
+        const newClass = new Class();
+        const date = new Date();
+
+        newClass.name = body.name;
+        newClass.description = body.description;
+        newClass.type = body.type;
+        newClass.createdBy = req.user._id;
+        newClass.updatedDate = newClass.createdDate = date;
+
+        await newClass.save();        
+    } catch (e) {
+        console.log(e);
+        data.status = 500;
+    } finally {
+        res.json(data);
+    }
+})
+
 module.exports = router;

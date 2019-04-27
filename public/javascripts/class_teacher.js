@@ -1,21 +1,17 @@
 let mdAddExercise = $('#mdAddExercise');
 let mdAddDocument = $('#mdAddDocument');
 
-function initCK() {
-    CKEDITOR.replace('txtDocContent');
-}
-
 function configEvents() {
-    $('#btnAddDoc').click(function() {
+    $('#btnAddDoc').click(function () {
         $('#mdAddDocument').modal('show');
     });
 
-    $('#btnAddExer').click(function() {
+    $('#btnAddExer').click(function () {
         $('#mdAddExercise').modal('show');
     });
 
     function configEditExercise() {
-        $('#divExerciseList').on('click', 'button', function(e) {
+        $('#divExerciseList').on('click', 'button', function (e) {
             let data = $(e.target).parent().data('data');
 
             switch (data.type) {
@@ -24,6 +20,14 @@ function configEvents() {
                         showEditExerListenAndRewrite(data);
                         break;
                     }
+                case 'FILL_MISSING_WORDS':
+                    {
+                        showEditExerFillMissingWords(data);
+                        break;
+                    }
+                default: {
+
+                }
             }
         });
     }
@@ -63,14 +67,14 @@ function getDocumentList() {
         data: {
             classId: pageInfo.classId
         },
-        success: function(data) {
+        success: function (data) {
             if (data.status && data.status == 200) {
                 fill(data.data);
             } else {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             }
         },
-        error: function() {
+        error: function () {
             toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
         },
         dataType: 'json'
@@ -109,14 +113,14 @@ function getExerList() {
         data: {
             classId: pageInfo.classId
         },
-        success: function(data) {
+        success: function (data) {
             if (data.status && data.status == 200) {
                 fill(data.data);
             } else {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             }
         },
-        error: function() {
+        error: function () {
             toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
         },
         dataType: 'json'
@@ -124,6 +128,11 @@ function getExerList() {
 }
 
 function configEditDocument() {
+
+    function initCK() {
+        CKEDITOR.replace('txtDocContent');
+    }
+
 
     function edit() {
 
@@ -143,7 +152,7 @@ function configEditDocument() {
             type: "POST",
             url: '/documents',
             data: data,
-            success: function(data) {
+            success: function (data) {
                 if (data.status && data.status == 200) {
                     toastr.success('Thao tác thành công!');
                     getDocumentList();
@@ -152,18 +161,18 @@ function configEditDocument() {
                     toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
                 }
             },
-            error: function() {
+            error: function () {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             },
             dataType: 'json'
         });
     }
 
-    $('#mdAddDocumentbtnEdit').click(function() {
+    $('#mdAddDocumentbtnEdit').click(function () {
         edit();
     });
 
-    $('#divDocumentList').on('click', 'button', function(e) {
+    $('#divDocumentList').on('click', 'button', function (e) {
         let data = $(e.target).parent().data('data');
 
         $('#mdAddDocumenttxtName').val(data.name);
@@ -172,6 +181,8 @@ function configEditDocument() {
         $('#mdAddDocumenttxtDocId').val(data._id);
         $('#mdAddDocument').modal('show');
     });
+
+    initCK();
 }
 
 function showEditExerListenAndRewrite(data) {
@@ -205,13 +216,27 @@ function showEditExerListenAndRewrite(data) {
     mdAddExercise.modal('show');
 }
 
+function showEditExerFillMissingWords(data) {
+    let mainDiv = $('#div_edit_exer_fill_missing_words');   
+    let btnAddExer = mainDiv.find('[name=btn-add-exer]');
+
+    mainDiv.find('input[name="txt-name"]').val(data.name);
+    mainDiv.find('input[name="txt-des"]').val(data.description);
+    CKEDITOR.instances.txtExerFillMissingWords.setData(data.content.paragraph);
+    mainDiv.data('exercise', data);
+
+    changeModalTab('edit_exer_fill_missing_words', 'edit_exer_fill_missing_words');
+
+    mdAddExercise.modal('show');
+}
+
 function configEditExerListenAndRewrite() {
     let mainDiv = $('#div_edit_exer_listen_and_rewrite');
     let btnAddItem = mainDiv.find('[name=btn-add]');
     let divList = mainDiv.find('[name=div-list]');
     let btnAddExer = mainDiv.find('[name=btn-add-exer]');
 
-    btnAddItem.click(function(e) {
+    btnAddItem.click(function (e) {
         divList.append(`
                     <div class="col-md-3 listen-and-rewrite-box">
                         <div>
@@ -225,11 +250,11 @@ function configEditExerListenAndRewrite() {
         `);
     });
 
-    mainDiv.on('click', '.listen-and-rewrite-box button', function(e) {
+    mainDiv.on('click', '.listen-and-rewrite-box button', function (e) {
         $(e.target).parent().parent().parent()[0].removeChild($(e.target).parent().parent()[0]);
     });
 
-    btnAddExer.click(function() {
+    btnAddExer.click(function () {
         let data = [];
 
         let list = divList.find('.listen-and-rewrite-box');
@@ -276,7 +301,7 @@ function configEditExerListenAndRewrite() {
             data: formData,
             processData: false,
             contentType: false,
-            success: function(data) {
+            success: function (data) {
                 if (data.status && data.status == 200) {
                     toastr.success('Thao tác thành công!');
                     mdAddExercise.modal('hide');
@@ -286,7 +311,7 @@ function configEditExerListenAndRewrite() {
                     toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
                 }
             },
-            error: function() {
+            error: function () {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             },
             dataType: 'json'
@@ -294,12 +319,67 @@ function configEditExerListenAndRewrite() {
     });
 }
 
-$(document).ready(function() {
+function configEditExerFillMissingWords() {
+    let mainDiv = $('#div_edit_exer_fill_missing_words');
+    let btnAddExer = mainDiv.find('[name=btn-add-exer]');
+
+    function initCK() {
+        CKEDITOR.replace('txtExerFillMissingWords', {
+            extraPlugins: 'exerfilltext'
+        });
+    }
 
     initCK();
+
+    btnAddExer.click(function () {
+        let data;
+
+        let name = mainDiv.find('input[name="txt-name"]').val();
+        let description = mainDiv.find('input[name="txt-des"]').val();
+
+        if (name.trim() === '') {
+            toastr.error('Tên bài tập trống!');
+            return;
+        }
+
+        data = {
+            classId: pageInfo.classId,
+            name: name,
+            exerciseType: 'FILL_MISSING_WORDS',
+            description, description,
+            paragraph: CKEDITOR.instances.txtExerFillMissingWords.getData(),
+        }
+
+        if (mainDiv.data('exercise'))
+            data.id = mainDiv.data('exercise')._id;
+
+        $.ajax({
+            type: "POST",
+            url: '/exercises',
+            data: data,
+            success: function (data) {
+                if (data.status && data.status == 200) {
+                    toastr.success('Thao tác thành công!');
+                    mdAddExercise.modal('hide');
+                    getExerList();
+                    // $('#mdAddDocument').modal('hide');
+                } else {
+                    toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                }
+            },
+            error: function () {
+                toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+            },
+            dataType: 'json'
+        });
+    });
+}
+
+$(document).ready(function () {
     configEvents();
     getDocumentList();
     getExerList();
     configEditDocument();
     configEditExerListenAndRewrite();
+    configEditExerFillMissingWords();
 })

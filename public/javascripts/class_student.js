@@ -3,11 +3,11 @@ function initCK() {
 }
 
 function configEvents() {
-    $('#btnAddDoc').click(function() {
+    $('#btnAddDoc').click(function () {
         $('#mdAddDocument').modal('show');
     });
 
-    $('#divDocumentList').on('click', 'button', function(e) {
+    $('#divDocumentList').on('click', 'button', function (e) {
         let data = $(e.target).parent().data('data');
 
         let view = $('.tab_document_view_doc');
@@ -26,15 +26,21 @@ function configEvents() {
     });
 
     function configEditExercise() {
-        $('#divExerciseList').on('click', 'button', function(e) {
+        $('#divExerciseList').on('click', 'button', function (e) {
             let data = $(e.target).parent().data('data');
 
             switch (data.type) {
-                case 'LISTEN_AND_REWRITE':
-                    {
-                        showDoExerListenAndRewrite(data);
-                        break;
-                    }
+                case 'LISTEN_AND_REWRITE': {
+                    showDoExerListenAndRewrite(data);
+                    break;
+                }
+                case 'FILL_MISSING_WORDS': {
+                    showDoExerFillMissingWords(data);
+                    break;
+                }
+                default: {
+
+                }
             }
         });
     }
@@ -79,6 +85,21 @@ function showDoExerListenAndRewrite(data) {
     changeTab('exercise', 'do_exer_listen_and_rewrite');
 }
 
+function showDoExerFillMissingWords(data) {
+    let mainDiv = $('#div_do_exer_fill_missing_words');
+    // let btnAddItem = mainDiv.find('[name=btn-add]');
+    let divParagraph = mainDiv.find('[name=paragraph]');
+    // let btnAddExer = mainDiv.find('[name=btn-add-exer]');
+
+    // mainDiv.find('input[name="txt-name"]').val(data.name);
+    // mainDiv.find('input[name="txt-des"]').val(data.description);
+    mainDiv.data('exercise', data);
+    divParagraph.html(data.content.paragraph);
+    
+
+    changeTab('exercise', 'do_exer_fill_missing_words');
+}
+
 function getDocumentList() {
 
     function fill(list) {
@@ -113,14 +134,14 @@ function getDocumentList() {
         data: {
             classId: pageInfo.classId
         },
-        success: function(data) {
+        success: function (data) {
             if (data.status && data.status == 200) {
                 fill(data.data);
             } else {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             }
         },
-        error: function() {
+        error: function () {
             toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
         },
         dataType: 'json'
@@ -159,14 +180,14 @@ function getExerciseList() {
         data: {
             classId: pageInfo.classId
         },
-        success: function(data) {
+        success: function (data) {
             if (data.status && data.status == 200) {
                 fill(data.data);
             } else {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             }
         },
-        error: function() {
+        error: function () {
             toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
         },
         dataType: 'json'
@@ -179,17 +200,17 @@ function configDoExerListenAndRewrite() {
     let divList = mainDiv.find('[name=div-list]');
     let btnSubmit = mainDiv.find('[name=btn-submit]');
 
-    mainDiv.on('click', '.listen-and-rewrite-box .btn-listen', function(e) {
+    mainDiv.on('click', '.listen-and-rewrite-box .btn-listen', function (e) {
         let url = '/audios/' + $(e.target).parent().parent().parent().data('itemdata').audio;
         new Audio(url).play();
     });
 
-    mainDiv.on('click', '.listen-and-rewrite-box .btn-listen', function(e) {
+    mainDiv.on('click', '.listen-and-rewrite-box .btn-listen', function (e) {
         let url = '/audios/' + $(e.target).parent().parent().parent().data('itemdata').audio;
         new Audio(url).play();
     });
 
-    mainDiv.on('change', '.listen-and-rewrite-box .txt-text', function(e) {
+    mainDiv.on('change', '.listen-and-rewrite-box .txt-text', function (e) {
         let box = $(e.target).parent().parent();
         box.attr('class', 'col-md-3 listen-and-rewrite-box');
         if ($(e.target).val() != '') {
@@ -197,7 +218,7 @@ function configDoExerListenAndRewrite() {
         }
     });
 
-    btnSubmit.click(function() {
+    btnSubmit.click(function () {
         let data = { answers: [] };
         let exerciseData = mainDiv.data('exercise');
 
@@ -217,7 +238,7 @@ function configDoExerListenAndRewrite() {
             type: "POST",
             url: '/answer-sheets',
             data: data,
-            success: function(data) {
+            success: function (data) {
                 if (data.status && data.status == 200) {
 
                     let cnt = 0;
@@ -245,7 +266,7 @@ function configDoExerListenAndRewrite() {
                     toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
                 }
             },
-            error: function() {
+            error: function () {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
             },
             dataType: 'json'
@@ -253,12 +274,80 @@ function configDoExerListenAndRewrite() {
     });
 }
 
-$(document).ready(function() {
+function configDoExerFillMissingWords() {
+    let mainDiv = $('#div_do_exer_fill_missing_words');
+    // let btnAddItem = mainDiv.find('[name=btn-add]');
+    let divParagraph = mainDiv.find('[name=paragraph]');
+    let btnSubmit = mainDiv.find('[name=btn-submit]');    
+
+    // mainDiv.on('change', 'input', function (e) {        
+    //     if ($(e.target).val() != '') {
+    //         $(e.target).addClass('listen-and-rewrite-box-done');
+    //     }
+    // });
+
+    btnSubmit.click(function () {
+        let data = { answers: [] };
+        let exerciseData = mainDiv.data('exercise');
+
+        let list = divParagraph.find('input');
+
+        for (let item of list) {
+            const e = $(item);          
+            data.answers.push({ textId: e.data('textid'), text: e.val()});
+        }
+
+        data.classId = exerciseData.classId;
+        data.exerciseId = exerciseData._id;
+        data.type = exerciseData.type;
+
+        $.ajax({
+            type: "POST",
+            url: '/answer-sheets',
+            data: data,
+            success: function (data) {
+                if (data.status && data.status == 200) {
+
+                    let cnt = 0;
+
+                    for (let attr in data.data) {
+                        if (data.data[attr])
+                            cnt++;
+                    }
+
+                    toastr.success(`Bạn trả lời đúng ${cnt}/${Object.keys(data.data).length} câu`);
+
+                    // for (let element of mainDiv.find('.listen-and-rewrite-box')) {
+                    //     let box = $(element);
+                    //     box.attr('class', 'col-md-3 listen-and-rewrite-box');
+                    //     let audioId = box.data('itemdata').audioId;
+                    //     if (data.data[audioId]) {
+                    //         box.addClass('listen-and-rewrite-box-correct');
+                    //     } else {
+                    //         box.addClass('listen-and-rewrite-box-wrong');
+                    //     }
+                    // };
+
+                    // $('#mdAddDocument').modal('hide');
+                } else {
+                    toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                }
+            },
+            error: function () {
+                toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+            },
+            dataType: 'json'
+        });
+    });
+}
+
+$(document).ready(function () {
     //   initCK();
 
     configEvents();
     getDocumentList();
     getExerciseList();
     configDoExerListenAndRewrite();
+    configDoExerFillMissingWords();
     //   configEditDocument();
 })

@@ -6,7 +6,8 @@
         "start": "nodemon ./bin/www"
     },
     "dependencies": {
-        "bcrypt": "^3.0.4",
+        "bcrypt": "^3.0.6",
+        "cheerio": "^1.0.0-rc.3",
         "cookie-parser": "^1.4.4",
         "debug": "~2.6.9",
         "ejs": "~2.5.7",

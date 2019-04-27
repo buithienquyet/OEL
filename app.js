@@ -24,7 +24,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ limit: '100mb', extended: true }));
+app.use(express.urlencoded({ limit: '100mb', extended: true , parameterLimit:50000}));
 app.use(cookieParser());
 app.use(session({
     secret: '_btq_',

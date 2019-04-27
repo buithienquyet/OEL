@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="btq">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Online English Learner</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/toastr.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial";
+            font-size: 14px;
+            background-size: 200% 100% !important;
+            animation: move 10s ease infinite;
+            transform: translate3d(0, 0, 0);
+            background: linear-gradient(45deg, #49d49d 10%, #a2c7e5 90%);
+            height: 100vh;
+        }
+
+        .user {
+            width: 90%;
+            max-width: 340px;
+            margin: 10vh auto;
+        }
+
+        .user__header {
+            text-align: center;
+            opacity: 0;
+            transform: translate3d(0, 500px, 0);
+            animation: arrive 500ms ease-in-out 0.7s forwards;
+        }
+
+        .login_footer {
+            text-align: center;
+            opacity: 0;
+            transform: translate3d(0, 500px, 0);
+            animation: arrive 1000ms ease-in-out 0.7s forwards;
+        }
+
+        .user__title {
+            font-size: 40px;
+            margin-bottom: -10px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .form {
+            margin-top: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translate3d(0, 500px, 0);
+            animation: arrive 500ms ease-in-out 0.9s forwards;
+        }
+
+        .form--no {
+            animation: NO 1s ease-in-out;
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .form__input {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            font-family: "Arial";
+            -webkit-appearance: none;
+            border: 0;
+            outline: 0;
+            transition: 0.3s;
+        }
+
+        .form__input:focus {
+            background: #f7f7f7;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            font-family: "Arial";
+            -webkit-appearance: none;
+            outline: 0;
+            border: 0;
+            color: white;
+            background: #aba194;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #a09486;
+        }
+
+        @keyframes NO {
+            from,
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                -webkit-transform: translate3d(-10px, 0, 0);
+                transform: translate3d(-10px, 0, 0);
+            }
+            20%,
+            40%,
+            60%,
+            80% {
+                -webkit-transform: translate3d(10px, 0, 0);
+                transform: translate3d(10px, 0, 0);
+            }
+        }
+
+        @keyframes arrive {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 50px, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        h5 {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #logo {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="user">
+
+        <div id="logo">
+            <a href="/"><img src="/img/logo.png" alt="" title="" width="120px"></a>
+            <span style=" font-size: 16px;color: white">ONLINE ENGLISH LEANER</span>
+        </div>
+
+        <!-- <header class="user__header">
+            <h1 class="user__title">Đăng nhập</h1>
+        </header> -->
+
+        <form class="form" action="/login" method="post">
+            <div class="form__group">
+                <input type="text" name="firstName" placeholder="Tên" value="<%=user.firstName%>" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="text" name="lastName" placeholder="Họ đệm" value="<%=user.lastName%>" class="form__input" />
+            </div>
+            <div class="form__group">
+                <input name="password" type="password" placeholder="Mật khẩu" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input name="retypepassword" type="password" placeholder="Nhập lại mật khẩu" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input name="email" type="email" placeholder="Địa chỉ email" value="<%=user.email%>" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input name="phoneNumber" type="text" placeholder="Số điện thoại" value="<%=user.phoneNumber%>" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input name="address" type="text" placeholder="Địa chỉ" value="<%=user.address%>" class="form__input" />
+            </div>
+
+            <div class="form__group" style="background-color: white; text-align: center">
+                <span>Ảnh đại diện</span>
+                <input name="avatar" type="file" accept=".png, .jpg" class="form__input" />
+            </div>
+
+            <button type="submit" class="btn" type="button">Lưu thay đổi</button>
+        </form>
+    </div>
+
+   
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="/js/vendor/toastr.js"></script>    
+
+    <script>     
+        $(".form").submit(function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            $.ajax({
+                type: "POST",
+                url: '/profile',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    if (data.status === 200) {
+                        toastr.success('Lưu thay đổi thành công!');
+                    }
+                    else {
+                        toastr.error(data.msg);
+                    }
+                },
+                error: function (error) {
+                    toastr.error('Có lỗi trong quá trình thực hiện yêu cầu của bạn!');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

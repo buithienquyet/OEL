@@ -1,56 +1,48 @@
 <header id="header">
     <div class="container">
-        <div class="row align-items-center justify-content-between d-flex">
+        <div class="row align-items-center justify-content-between" style="display: flex; justify-content: space-between;">
             <div id="logo">
                 <a href="/"><img width="54px" src="/img/logo.png" alt="" title="" /></a>
                 <span style="color: white">ONLINE ENGLISH LEANER</span>
             </div>
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="/">Trang chủ</a></li>
-                    <li><a href="/about.html">Giới thiệu</a></li>
-                    <li><a href="/classes">Lớp học</a></li>
 
-                    <% if (user) {%>
+            <ul class="nav-menu" style="margin-left: auto; display: flex; align-items: center;">
+                <li class="menu-active"><a href="/">Trang chủ</a></li>
+                <li><a href="/classes">Lớp học</a></li>
 
-                        <li class="dropdown user user-menu">
-                            <a href="../#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="/img/avatars/btq.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs"> <%=user.lastName +' '+user.firstName %> </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <!-- User image -->
-                                <li class="user-header">
-                                    <img src="/img/avatars/btq.jpg" class="img-circle" alt="User Image">
-                                    <p style="color: black">
-                                        <%=user.lastName +' '+user.firstName %>
-                                            <small> <%=user.phoneNumber%> </small>
-                                    </p>
-                                </li>
+                <% if (user) {%>
 
-                                <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="../#" class="btn btn-default btn-flat">Hồ sơ</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="/logout" class="btn btn-default btn-flat">Đăng xuất</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <%} else {%>
+                    <li class="dropdown user user-menu">
+                        <a href="../#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="/img/avatars/<%=user.avatarUrl%>" class="user-image" alt="User Image">
+                            <span class="hidden-xs"> <%=user.lastName +' '+user.firstName %> </span>
+                        </a>
+                        <ul class="dropdown-menu" style="margin-top: -2px">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="/img/avatars/<%=user.avatarUrl%>" class="img-circle" alt="User Image">
+                                <p style="color: black">
+                                    <%=user.lastName +' '+user.firstName %>
+                                        <small> <%=user.phoneNumber%> </small>
+                                </p>
+                            </li>
 
-                            <li><a href="/login.html">Đăng nhập</a></li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="/profile" class="btn btn-default btn-flat">Hồ sơ</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="/logout" class="btn btn-default btn-flat">Đăng xuất</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <%} else {%>
+                        <li><a href="/login.html">Đăng nhập</a></li>
+                        <%}%>
+            </ul>
 
-                            <%}%>
-
-
-
-                </ul>
-
-
-            </nav>
             <!-- #nav-menu-container -->
         </div>
     </div>
