@@ -36,7 +36,6 @@ router.post('/', async function (req, res, next) {
                 answerSheet.type = req.body.type;
                 answerSheet.content = req.body.answers;
 
-
                 let exer = await Exercise.findById(req.body.exerciseId);
 
                 let resultData = {};

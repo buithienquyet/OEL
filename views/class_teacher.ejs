@@ -146,7 +146,8 @@
                     <h3>
                         <%=classData.name%>
                     </h3>
-                    <button id="btnAddDoc" class="btn btn-primary">Thêm bài học</button>
+                    <button id="btnAddDoc" class="btn btn-primary">Thêm bài học soạn thảo</button>
+                    <button id="btnAddDocPdf" class="btn btn-primary">Thêm bài học PDF</button>
                     <div id="divDocumentList">
 
                     </div>
@@ -176,11 +177,11 @@
                 <div class="modal-content" style="border-radius: 5px;">
                     <div class="modal-header" style="display: flex;justify-content: space-between;">
                         <h5 class="modal-title">Bài học</h5>
-                        <button type="button" class="close"  style="margin-left: auto"  data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" style="margin-left: auto" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" >
+                    <div class="modal-body">
                         <input type="hidden" id="mdAddDocumenttxtDocId" value="">
                         <div class="form-group">
                             <label for="">Tiêu đề</label>
@@ -203,10 +204,43 @@
             </div>
         </div>
 
+        <div id="mdAddPdfDocument" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div style="width: 80%" class="modal-dialog modal-lg">
+                <div class="modal-content" style="border-radius: 5px;">
+                    <div class="modal-header" style="display: flex;justify-content: space-between;">
+                        <h5 class="modal-title">Bài học</h5>
+                        <button type="button" class="close" style="margin-left: auto" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="id" value="">
+                        <div class="form-group">
+                            <label for="">Tiêu đề</label>
+                            <input name="name" type="text" class="form-control" id="" aria-describedby="" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mô tả</label>
+                            <input name="description" type="text" class="form-control" id="" aria-describedby="" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tệp pdf</label>
+                            <input name="pdf" type="file" accept=".pdf"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="edit" type="button" class="btn btn-primary">Lưu thay đổi</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="mdAddExercise" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div style="width: 80%" class="modal-dialog modal-lg">
-                <div class="modal-content"  style="border-radius: 5px;">
+                <div class="modal-content" style="border-radius: 5px;">
                     <div class="modal-header" style="display: flex;justify-content: space-between;">
                         <h5 class="modal-title">Bài tập</h5>
 
@@ -261,26 +295,26 @@
                         </div>
 
                         <div id="div_edit_exer_fill_missing_words" data-tab-name="edit_exer_fill_missing_words" class="modaltabcontent" style="display: none;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="">Tiêu đề</label>
-                                            <input name="txt-name" id="" type="text" class="form-control" aria-describedby="" placeholder="">
-                                        </div>
-    
-                                        <div class="form-group">
-                                            <label for="">Mô tả</label>
-                                            <input name="txt-des" id="" type="text" class="form-control" aria-describedby="" placeholder="">
-                                        </div>
-    
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Tiêu đề</label>
+                                        <input name="txt-name" id="" type="text" class="form-control" aria-describedby="" placeholder="">
                                     </div>
-                                    <div class="col-md-12">          
-                                            <textarea type="text" class="form-control" id="txtExerFillMissingWords" aria-describedby="" placeholder=""> </textarea>
-                                    </div>    
+
+                                    <div class="form-group">
+                                        <label for="">Mô tả</label>
+                                        <input name="txt-des" id="" type="text" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+
                                 </div>
-    
-                                <button name="btn-add-exer" id="" type="button " class="btn btn-primary pull-right">Lưu </button>
-                        </div>    
+                                <div class="col-md-12">
+                                    <textarea type="text" class="form-control" id="txtExerFillMissingWords" aria-describedby="" placeholder=""> </textarea>
+                                </div>
+                            </div>
+
+                            <button name="btn-add-exer" id="" type="button " class="btn btn-primary pull-right">Lưu </button>
+                        </div>
                     </div>
                     <!-- <div class="modal-footer "> -->
                     <!-- <button id="mdAddDocumentbtnEdit " type="button " class="btn btn-primary ">Lưu thay đổi</button>

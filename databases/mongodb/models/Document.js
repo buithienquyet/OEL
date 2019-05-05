@@ -10,14 +10,14 @@ schema = new Schema({
     createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
     classId: { type: Schema.Types.ObjectId, ref: 'Class' },
     updatedDate: Date,
-    createdDate: Date,
+    createdDate: Date,    
     isBeingDeleted: Boolean,
     iconUrl: String,
     type: {
         type: String,
         required: true,
     },
-    content: String
+    content: Object
 });
 
 const Class = mongoose.model('Document', schema, 'Documents');

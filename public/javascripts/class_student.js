@@ -10,13 +10,26 @@ function configEvents() {
     $('#divDocumentList').on('click', 'button', function (e) {
         let data = $(e.target).parent().data('data');
 
-        let view = $('.tab_document_view_doc');
+        switch (data.type) {
+            case constants.DOCUMENT.TYPE.ARTICLE:
+                let view = $('.tab_document_view_doc');
 
-        view.find('h3').html(data.name);
-        view.find('h4').html(data.description);
-        view.find('p').html(data.content);
+                view.find('h3').html(data.name);
+                view.find('h4').html(data.description);
+                view.find('p').html(data.content);
 
-        changeTab('document', 'document_view_doc');
+                changeTab('document', 'document_view_doc');
+                break;
+
+            case constants.DOCUMENT.TYPE.PDF:                                           
+                window.open("/pdfs/web/viewer?id="+ data._id ); 
+                break;
+            default: {
+
+            }
+        }
+
+
 
         // $('#mdAddDocumenttxtName').val(data.name);
         // $('#mdAddDocumenttxtDes').val(data.description);
@@ -95,7 +108,7 @@ function showDoExerFillMissingWords(data) {
     // mainDiv.find('input[name="txt-des"]').val(data.description);
     mainDiv.data('exercise', data);
     divParagraph.html(data.content.paragraph);
-    
+
 
     changeTab('exercise', 'do_exer_fill_missing_words');
 }
@@ -278,7 +291,7 @@ function configDoExerFillMissingWords() {
     let mainDiv = $('#div_do_exer_fill_missing_words');
     // let btnAddItem = mainDiv.find('[name=btn-add]');
     let divParagraph = mainDiv.find('[name=paragraph]');
-    let btnSubmit = mainDiv.find('[name=btn-submit]');    
+    let btnSubmit = mainDiv.find('[name=btn-submit]');
 
     // mainDiv.on('change', 'input', function (e) {        
     //     if ($(e.target).val() != '') {
@@ -293,8 +306,8 @@ function configDoExerFillMissingWords() {
         let list = divParagraph.find('input');
 
         for (let item of list) {
-            const e = $(item);          
-            data.answers.push({ textId: e.data('textid'), text: e.val()});
+            const e = $(item);
+            data.answers.push({ textId: e.data('textid'), text: e.val() });
         }
 
         data.classId = exerciseData.classId;

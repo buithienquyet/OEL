@@ -3,7 +3,11 @@ let mdAddDocument = $('#mdAddDocument');
 
 function configEvents() {
     $('#btnAddDoc').click(function () {
-        $('#mdAddDocument').modal('show');
+        showEditDocumentArticle(null);
+    });
+
+    $('#btnAddDocPdf').click(function () {
+        showEditDocumentPdf(null);
     });
 
     $('#btnAddExer').click(function () {
@@ -32,7 +36,30 @@ function configEvents() {
         });
     }
 
+    function configEditDocument() {
+        $('#divDocumentList').on('click', 'button', function (e) {
+            let data = $(e.target).parent().data('data');
+
+            switch (data.type) {
+                case 'ARTICLE':
+                    {
+                        showEditDocumentArticle(data);
+                        break;
+                    }
+                case 'PDF':
+                    {
+                        showEditDocumentPdf(data);
+                        break;
+                    }
+                default: {
+
+                }
+            }
+        });
+    }
+
     configEditExercise();
+    configEditDocument();
 }
 
 function getDocumentList() {
@@ -127,7 +154,7 @@ function getExerList() {
     });
 }
 
-function configEditDocument() {
+function configEditDocumentArticle() {
 
     function initCK() {
         CKEDITOR.replace('txtDocContent');
@@ -142,7 +169,8 @@ function configEditDocument() {
             name: $('#mdAddDocumenttxtName').val(),
             description: $('#mdAddDocumenttxtDes').val(),
             content: CKEDITOR.instances.txtDocContent.getData(),
-            classId: pageInfo.classId
+            classId: pageInfo.classId,
+            type: constants.DOCUMENT.TYPE.ARTICLE
         }
 
         if (id && id.trim() != '')
@@ -172,17 +200,90 @@ function configEditDocument() {
         edit();
     });
 
-    $('#divDocumentList').on('click', 'button', function (e) {
-        let data = $(e.target).parent().data('data');
-
-        $('#mdAddDocumenttxtName').val(data.name);
-        $('#mdAddDocumenttxtDes').val(data.description);
-        CKEDITOR.instances.txtDocContent.setData(data.content);
-        $('#mdAddDocumenttxtDocId').val(data._id);
-        $('#mdAddDocument').modal('show');
-    });
-
     initCK();
+}
+
+function configEditDocumentPdf() {
+
+    const modal = $('#mdAddPdfDocument');
+    const txtId = modal.find('[name="id"]');
+    const txtName = modal.find('[name="name"]');
+    const txtDes = modal.find('[name="description"]');
+    const btnEdit = modal.find('[name="edit"]');
+    const filePdf = modal.find('[name="pdf"]');
+
+    function edit() {
+
+        const data = new FormData();
+        const id = txtId.val();
+
+        if (id && id.trim() != '')
+            data.append('id', id);        
+        data.append('name', txtName.val());
+        data.append('description', txtDes.val());
+        data.append('classId', pageInfo.classId);     
+        data.append('pdf', filePdf[0].files[0]);
+        data.append('type', constants.DOCUMENT.TYPE.PDF);
+
+        btnEdit.attr('disabled', true);
+           
+        $.ajax({
+            type: "POST",
+            url: '/documents',
+            data: data,
+            processData: false,
+            contentType: false,
+            dataType: 'json',
+            success: function (data) {
+                if (data.status && data.status == 200) {
+                    toastr.success('Thao tác thành công!');
+                    getDocumentList();
+                    modal.modal('hide');
+                } else {
+                    toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                }
+                btnEdit.attr('disabled', false);
+            },
+            error: function () {
+                toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                btnEdit.attr('disabled', false);
+            }          
+        });
+    }
+
+    btnEdit.click(function () {
+        edit();
+    });
+}
+
+function showEditDocumentArticle(data) {    
+    if (!data)
+        data ={};
+    const {name = '', description = '', content = '', _id } = data;
+    $('#mdAddDocumenttxtName').val(name);
+    $('#mdAddDocumenttxtDes').val(description);
+    CKEDITOR.instances.txtDocContent.setData(content);
+    $('#mdAddDocumenttxtDocId').val(_id);
+    $('#mdAddDocument').modal('show');
+}
+
+function showEditDocumentPdf(data) {
+    const modal = $('#mdAddPdfDocument');
+    const txtId = modal.find('[name="id"]');
+    const txtName = modal.find('[name="name"]');
+    const txtDes = modal.find('[name="description"]');
+    const btnEdit = modal.find('[name="edit"]');
+    const filePdf = modal.find('[name="pdf"]');
+
+    if (!data)
+        data ={};
+    const {name = '', description = '', content = '', _id } = data;
+    
+    txtId.val(_id);
+    txtName.val(name);
+    txtDes.val(description);
+
+    modal.modal('show');
 }
 
 function showEditExerListenAndRewrite(data) {
@@ -203,7 +304,7 @@ function showEditExerListenAndRewrite(data) {
             <div>
                 <button type="button" class="close" aria-label="Close" onclick>
                             <span aria-hidden="true">×</span>
-                        </button>
+                </button>
                 <input type="text" value=${item.text} class="form-control">
                 <input style="margin-top: 5px" class="form-control-file" type="file">
             </div>
@@ -217,7 +318,7 @@ function showEditExerListenAndRewrite(data) {
 }
 
 function showEditExerFillMissingWords(data) {
-    let mainDiv = $('#div_edit_exer_fill_missing_words');   
+    let mainDiv = $('#div_edit_exer_fill_missing_words');
     let btnAddExer = mainDiv.find('[name=btn-add-exer]');
 
     mainDiv.find('input[name="txt-name"]').val(data.name);
@@ -379,7 +480,8 @@ $(document).ready(function () {
     configEvents();
     getDocumentList();
     getExerList();
-    configEditDocument();
+    configEditDocumentArticle();
+    configEditDocumentPdf();
     configEditExerListenAndRewrite();
     configEditExerFillMissingWords();
 })
