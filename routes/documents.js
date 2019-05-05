@@ -64,8 +64,14 @@ async function pdfPostIndex(req, res, next) {
                 console.log(`java -jar "./utils/ExtractPdfAudios.jar" "${fileLocation}" "${outputFolder}"`);
                 exec(`java -jar "./utils/ExtractPdfAudios.jar" "${fileLocation}" "${outputFolder}"`, (error, stdout, stderr) => {
                     const log = `stdout: ${stdout}\nstderr: ${stderr}\nexec error: ${error}`;
-                    console.log(log);
-                    fs.writeFileSync(__dirname+'/../logs/pdfs/' + fileName + '.log', log);
+
+                    try {
+                        fs.writeFileSync(__dirname + '/../logs/pdfs/' + fileName + '.log', log);
+                    }
+                    catch (e) {
+                        reject(e);
+                        return;
+                    }
 
                     if (error) {
                         reject(error);
@@ -78,7 +84,7 @@ async function pdfPostIndex(req, res, next) {
         }
 
         function getAudioData(fileLocation) {
-            const str = fs.readFileSync(fileLocation,'utf8');
+            const str = fs.readFileSync(fileLocation, 'utf8');
             const result = {};
             const lines = str.split('\n');
 
@@ -108,7 +114,7 @@ async function pdfPostIndex(req, res, next) {
             return result;
         }
 
-        const baseLocation = __dirname+'/../public/pdfs';
+        const baseLocation = __dirname + '/../public/pdfs';
         fileNameWithoutExtension = fileName.split('.')[0];
         const outputFolder = baseLocation + '/pdf-data/' + fileNameWithoutExtension;
         const fileLocation = baseLocation + '/files/' + fileName;
@@ -123,8 +129,8 @@ async function pdfPostIndex(req, res, next) {
             throw new Error('excecute java program failure ' + e);
         }
 
-        const audioData = getAudioData(outputFolder+'/audio.txt');
-        
+        const audioData = getAudioData(outputFolder + '/audio.txt');
+
         return audioData;
     }
 
@@ -146,10 +152,10 @@ async function pdfPostIndex(req, res, next) {
             const fileName = req.file.filename;
 
             // console.log(new Date());
-            const audioData = await extractPdfData(fileName);            
+            const audioData = await extractPdfData(fileName);
             // console.log(new Date());
             doc.content = {
-                name : fileName,
+                name: fileName,
                 audioData
             }
 
