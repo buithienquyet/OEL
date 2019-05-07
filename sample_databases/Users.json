@@ -1,20 +1,50 @@
 { 
     "_id" : ObjectId("5c74391e55cd132410c04153"), 
     "userName" : "btq", 
-    "firstName" : "Quyet", 
-    "lastName" : "Bui", 
+    "password" : "$2b$10$794mx4dS7KjXQYDX.WtoJuTlymogWLMMgeyIKWSyIvTVtq2Bh/soO", 
+    "__v" : NumberInt(0), 
+    "address" : "Tân Lạc - Hòa Bình", 
+    "avatarUrl" : "38405f40-6443-11e9-adc6-65e9fc43d72b.jpg", 
+    "email" : "buiquyet3@gmail.com", 
     "phoneNumber" : "0399876304", 
-    "password" : "$2b$10$9ykvfxf.KCI.iL6U3ceyOedM4dh2eWQUzXGuWuZl8.Giai.QXBtb.", 
-    "__v" : NumberInt(0)
+    "firstName" : "Quyết", 
+    "lastName" : "Bùi"
 }
 { 
     "_id" : ObjectId("5c75a829f9d44131c4c045c0"), 
     "userName" : "ngocthien", 
     "password" : "$2b$10$9ykvfxf.KCI.iL6U3ceyOedM4dh2eWQUzXGuWuZl8.Giai.QXBtb.", 
     "firstName" : "Thiện", 
-    "email" : "ngocjthien@gmail.com", 
+    "email" : "ngocthien@gmail.com", 
     "address" : "Tân Lac-Hòa Bình", 
     "createdDate" : ISODate("2019-02-26T20:57:13.656+0000"), 
     "__v" : NumberInt(0), 
-    "lastName" : "Ngọc"
+    "lastName" : "Ngọc", 
+    "avatarUrl" : "2a129c80-6443-11e9-adc6-65e9fc43d72b.png", 
+    "phoneNumber" : ""
+}
+{ 
+    "_id" : ObjectId("5cd0d928e9301a2dacb722c6"), 
+    "userName" : "hdanh", 
+    "password" : "$2b$10$bAyAQ3e1ea8hDdeT0Yoda.jhNucV3Nw8kPNVGFzBxeWZPuZB7FEMS", 
+    "firstName" : "Anh", 
+    "lastName" : "Hoàng Đức", 
+    "email" : "hdanh@gmail.com", 
+    "address" : "Tân Lạc - Hòa Bình", 
+    "createdDate" : ISODate("2019-05-07T01:02:32.389+0000"), 
+    "__v" : NumberInt(0), 
+    "phoneNumber" : "0334234233234"
+}
+{ 
+    "_id" : ObjectId("5cd0e60b216fde0638679f52"), 
+    "phoneNumber" : "0938743838", 
+    "address" : "Phú Thọ", 
+    "email" : "ndtu@gmail.com", 
+    "userName" : "ndtu", 
+    "password" : "$2b$10$XZfxTRDgLCHtoFXDSlhspOp2w3MhxieqVNd.5htYCMBH1j7/Tb9na", 
+    "firstName" : "Tú", 
+    "lastName" : "Nguyễn Đức", 
+    "avatarUrl" : "default.png", 
+    "createdDate" : ISODate("2019-05-07T01:57:31.691+0000"), 
+    "__v" : NumberInt(0)
 }

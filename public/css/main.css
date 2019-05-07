@@ -2464,7 +2464,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 1440px) {
     .banner-content {
-        margin-top: 0;
+        margin-top: 75px;
     }
 }
 
@@ -4177,6 +4177,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #75ffa3;
 }
 
+.listen-and-rewrite-box .form-control-file{
+    width: 100%
+}
+
 .modaltabcontent {
     float: left;
     padding: 15px;
@@ -4212,4 +4216,19 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .tab button svg {
     margin-right: 5px;
+}
+
+/* body {
+    min-height: 100%;
+}
+
+.footer-area {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; 
+} */
+
+.select2-selection__choice {
+    margin-bottom: 5px;
 }

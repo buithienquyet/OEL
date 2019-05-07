@@ -37,7 +37,7 @@ function configEvents() {
     }
 
     function configEditDocument() {
-        $('#divDocumentList').on('click', 'button', function (e) {
+        $('#divDocumentList').on('click', 'button.edit', function (e) {
             let data = $(e.target).parent().data('data');
 
             switch (data.type) {
@@ -58,8 +58,35 @@ function configEvents() {
         });
     }
 
+    function configDeleteDocument() {
+        $('#divDocumentList').on('click', 'button.delete', function (e) {
+            let data = $(e.target).parent().data('data');
+
+            if (confirm("Bạn có chắc chắn muốn xóa bài học này?"))
+            {
+                $.ajax({
+                    type: "DELETE",
+                    url: '/documents/'+ data._id,
+                    success: function (data) {
+                        if (data.status && data.status == 200) {
+                            toastr.success('Xóa bài học thành công!');
+                            getDocumentList();                           
+                        } else {
+                            toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                        }
+                    },
+                    error: function () {
+                        toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
+                    },
+                    dataType: 'json'
+                });
+            }           
+        });
+    }
+
     configEditExercise();
     configEditDocument();
+    configDeleteDocument();
 }
 
 function getDocumentList() {
@@ -68,8 +95,14 @@ function getDocumentList() {
 
         div.empty();
 
-        if (list.lenght == 0)
-            div.innerHTML = `Chưa có mục nào được cập nhật!`;
+        if (list.length == 0) {
+            div.append(`
+                        <div class="alert alert-warning" style="text-align: center; margin-top: 20px" role="alert">
+                            Chưa bài học nào được cập nhật
+                        </div>
+                        `);
+            return;
+        }
 
         for (let item of list) {
 
@@ -80,7 +113,8 @@ function getDocumentList() {
             let content = `       
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">${item.description}</p>
-                        <button class="btn btn-primary edit-exercise">Sửa</button>           
+                        <button class="btn btn-primary edit">Sửa</button>  
+                        <button class="btn btn-primary delete">Xóa</button>           
                         `;
             divWrapper.innerHTML = content;
 
@@ -114,8 +148,14 @@ function getExerList() {
 
         div.empty();
 
-        if (list.lenght == 0)
-            div.innerHTML = `Chưa có mục nào được cập nhật!`;
+        if (list.length == 0) {
+            div.append(`
+                        <div class="alert alert-warning" style="text-align: center; margin-top: 20px" role="alert">
+                            Chưa bài tập nào được cập nhật
+                        </div>
+                        `);
+            return;
+        }
 
         for (let item of list) {
 
@@ -505,8 +545,8 @@ function configSettingClass() {
         });
     }
 
-    function changeDisplayOfStudents(isChecked) {
-        if (isChecked) {
+    function changeDisplayOfStudents(isPublic) {
+        if (isPublic) {
             divStudents.hide();
         }
         else {
@@ -522,9 +562,10 @@ function configSettingClass() {
             changeDisplayOfStudents(isChecked);
         });
 
-        if (pageInfo.classType === constants.CLASS.TYPE.PUBLIC) {
-            switchIsPublic.bootstrapToggle('on');
-        }
+        const isPublic = (pageInfo.classType === constants.CLASS.TYPE.PUBLIC);
+        switchIsPublic.bootstrapToggle(isPublic ? 'on' : 'off');
+
+        changeDisplayOfStudents(isPublic);
 
         students.select2({ dropdownAutoWidth: true });
 
@@ -542,10 +583,10 @@ function configSettingClass() {
         }
     }
 
-    function edit(data) {     
+    function edit(data) {
 
         return new Promise(function (resolve, reject) {
-            
+
             $.ajax({
                 type: "POST",
                 url: '/classes/' + pageInfo.classId,
@@ -580,15 +621,14 @@ function configSettingClass() {
                     students: students.val(),
                     name: txtName.val(),
                     description: txtDescription.val(),
-                    type: students.prop('checked') ? constants.CLASS.TYPE.PUBLIC : constants.CLASS.TYPE.PRIVATE
+                    type: (switchIsPublic.prop('checked') ? constants.CLASS.TYPE.PUBLIC : constants.CLASS.TYPE.PRIVATE)
                 }
-    
-                if (!validate(data))
-                {               
+
+                if (!validate(data)) {
                     toastr.error('Dữ liệu chưa hợp lệ!');
                     return;
                 }
-    
+
                 await edit(data);
                 toastr.success('Thao tác thành công!');
             }

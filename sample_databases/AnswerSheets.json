@@ -306,3 +306,60 @@
     ], 
     "__v" : NumberInt(0)
 }
+{ 
+    "_id" : ObjectId("5cbc4cdf825dab41a00ebf94"), 
+    "createdDate" : ISODate("2019-04-21T10:58:39.114+0000"), 
+    "updatedDate" : ISODate("2019-04-21T10:58:39.114+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "home", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5cbc4d02825dab41a00ebf95"), 
+    "createdDate" : ISODate("2019-04-21T10:59:14.822+0000"), 
+    "updatedDate" : ISODate("2019-04-21T10:59:14.822+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "b", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5cd1028ed368c538646c0911"), 
+    "createdDate" : ISODate("2019-05-07T03:59:10.793+0000"), 
+    "updatedDate" : ISODate("2019-05-07T03:59:10.793+0000"), 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "exercise" : ObjectId("5c7d50951526a619504784d4"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "content" : [
+        {
+            "text" : "door", 
+            "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
+        }, 
+        {
+            "text" : "house", 
+            "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}

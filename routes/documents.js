@@ -165,8 +165,20 @@ async function pdfPostIndex(req, res, next) {
             doc.classId = data.classId;
             doc.type = constants.DOCUMENT.TYPE.PDF;
             doc.name = data.name;
-            doc.description = data.description;
-            doc.content = data.content;
+            doc.description = data.description;          
+
+            if (req.file)
+            {
+                const fileName = req.file.filename;
+
+                // console.log(new Date());
+                const audioData = await extractPdfData(fileName);
+                // console.log(new Date());
+                doc.content = {
+                    name: fileName,
+                    audioData
+                }
+            }           
         }
 
         await doc.save();
@@ -207,6 +219,22 @@ router.get('/', async function (req, res) {
         result = await Document.find({ classId: classId }).sort({ createdDate: -1 });
         data.data = result;
         //res.render('class', dataToRender);
+
+    } catch (e) {
+        console.log(e);
+        data.status = 500;
+    } finally {
+        res.json(data);
+    }
+});
+
+router.delete('/:id', async function (req, res) {
+
+    let data = { status: 200, data: [] };
+
+    try {
+       
+        await Document.findByIdAndDelete(req.params.id);               
 
     } catch (e) {
         console.log(e);

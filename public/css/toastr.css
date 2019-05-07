@@ -33,7 +33,7 @@
     color: #FFF;
     -webkit-text-shadow: 0 1px 0 #fff;
     text-shadow: 0 1px 0 #fff;
-    opacity: .8;
+    opacity: 1;
     -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
     filter: alpha(opacity=80);
     line-height: 1
@@ -44,7 +44,7 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    opacity: .4;
+    opacity: 1;
     -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=40);
     filter: alpha(opacity=40)
 }
@@ -135,7 +135,7 @@ button.toast-close-button {
     -webkit-box-shadow: 0 0 12px #999;
     box-shadow: 0 0 12px #999;
     color: #FFF;
-    opacity: .8;
+    opacity: 1;
     -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
     filter: alpha(opacity=80)
 }
@@ -212,7 +212,7 @@ button.toast-close-button {
     bottom: 0;
     height: 4px;
     background-color: #000;
-    opacity: .4;
+    opacity: 1;
     -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=40);
     filter: alpha(opacity=40)
 }

@@ -1,24 +1,1233 @@
 { 
     "_id" : ObjectId("5c7579244422d84bdc97f328"), 
     "createdDate" : ISODate("2019-02-26T17:36:36.750+0000"), 
-    "updatedDate" : ISODate("2019-02-26T19:31:29.003+0000"), 
+    "updatedDate" : ISODate("2019-05-05T01:14:35.357+0000"), 
     "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
     "name" : "Số nhiều của danh từ", 
     "description" : "Một được xem là số ít (singular). Từ hai trở lên được xem là số nhiều (plural). Danh từ thay đổi theo số ít và số nhiều.", 
     "content" : "<p>1.&nbsp;&nbsp; &nbsp;Th&ocirc;ng thường danh từ lấy th&ecirc;m S ở số nhiều.<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: chair &mdash; chairs; girl &mdash; girls; dog &mdash; dogs<br />\n2.&nbsp;&nbsp; &nbsp;Những danh từ tận c&ugrave;ng bằng O, X, S, Z, CH, SH lấy th&ecirc;m ES ở số nhiều.<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ:<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;potato &mdash; potatoes<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;box &mdash; boxes<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;bus &mdash; buses<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;buzz &mdash; buzzes<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;watch &mdash; watches<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;dish &mdash; dishes<br />\n&nbsp;&nbsp; &nbsp;Ngoại lệ:<br />\n&nbsp;&nbsp; &nbsp;a) Những danh từ tận c&ugrave;ng bằng nguy&ecirc;n &acirc;m + O chỉ lấy th&ecirc;m S ở số nhiều.<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: cuckoos, cameos, bamboos, curios, studios, radios<br />\n&nbsp;&nbsp; &nbsp;b) Những danh từ tận c&ugrave;ng bằng O nhưng c&oacute; nguồn gốc kh&ocirc;ng phải l&agrave; tiếng Anh chỉ lấy th&ecirc;m S ở số nhiều.<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: pianos, photos, dynamo, magnetos, kilos, mementos, solos<br />\n3.&nbsp;&nbsp; &nbsp;Những danh từ tận c&ugrave;ng bằng phụ &acirc;m + Y th&igrave; chuyển Y th&agrave;nh I trước khi lấy th&ecirc;m ES.<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: lady &mdash; ladies; story &mdash; stories<br />\n4.&nbsp;&nbsp; &nbsp;Những danh từ tận c&ugrave;ng bằng F hay FE th&igrave; chuyển th&agrave;nh VES ở số nhiều.<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: leaf &mdash; leaves; knife &mdash; knives<br />\n&nbsp;&nbsp; &nbsp;Ngoại lệ:<br />\n&nbsp;&nbsp; &nbsp;a) Những danh từ sau chỉ th&ecirc;m S ở số nhiều:<br />\n&nbsp;&nbsp; &nbsp;roofs&nbsp;&nbsp; &nbsp;: m&aacute;i nh&agrave;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;gulfs&nbsp;&nbsp; &nbsp;: vịnh<br />\n&nbsp;&nbsp; &nbsp;cliffs&nbsp;&nbsp; &nbsp;: bờ đ&aacute; dốc&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;reefs&nbsp;&nbsp; &nbsp;: đ&aacute; ngầm<br />\n&nbsp;&nbsp; &nbsp;proofs&nbsp;&nbsp; &nbsp;: bằng chứng&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;chiefs&nbsp;&nbsp; &nbsp;: thủ l&atilde;nh<br />\n&nbsp;&nbsp; &nbsp;turfs&nbsp;&nbsp; &nbsp;: lớp đất mặt&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;safes&nbsp;&nbsp; &nbsp;: tủ sắt<br />\n&nbsp;&nbsp; &nbsp;dwarfs&nbsp;&nbsp; &nbsp;: người l&ugrave;n<br />\n&nbsp;&nbsp; &nbsp;beliefs&nbsp;&nbsp; &nbsp;: niềm tin<br />\n&nbsp;&nbsp; &nbsp;b) Những danh từ sau đ&acirc;y c&oacute; hai h&igrave;nh thức số nhiều:<br />\n&nbsp;&nbsp; &nbsp;wharfs, wharves&nbsp;&nbsp; &nbsp;: cầu t&agrave;u gỗ<br />\n&nbsp;&nbsp; &nbsp;staffs, staves&nbsp;&nbsp; &nbsp;: c&aacute;n bộ<br />\n&nbsp;&nbsp; &nbsp;hoofs, hooves&nbsp;&nbsp; &nbsp;: m&oacute;ng guốc</p>\n\n<p>II. C&aacute;ch ph&aacute;t &acirc;m S tận c&ugrave;ng</p>\n\n<p>S tận c&ugrave;ng (ending S) được ph&aacute;t &acirc;m như sau:<br />\n1.&nbsp;&nbsp; &nbsp;Được ph&aacute;t &acirc;m l&agrave; [z]: khi đi sau c&aacute;c nguy&ecirc;n &acirc;m v&agrave; c&aacute;c phụ &acirc;m tỏ (voiced consonants), cụ thể l&agrave; c&aacute;c phụ &acirc;m sau: [b], [d], [g], [v], [&eth;], [m], [n], [N], [l], [r].<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: boys, lies, ways, pubs, words, pigs, loves, bathes, rooms, turns, things, walls, cars.<br />\n2.&nbsp;&nbsp; &nbsp;Được ph&aacute;t &acirc;m l&agrave; [s]: khi đi sau c&aacute;c phụ &acirc;m điếc (voiceless consonants), cụ thể l&agrave; c&aacute;c phụ &acirc;m sau: [f], [k], [p], [t] v&agrave; [T].<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: laughs, walks, cups, cats, tenths.<br />\n3.&nbsp;&nbsp; &nbsp;Được ph&aacute;t &acirc;m l&agrave; /iz/: khi đi sau một phụ &acirc;m r&iacute;t (hissing consonants), cụ thể l&agrave; c&aacute;c phụ &acirc;m sau: [z], [s], [dZ], [tS], [S], [Z].<br />\n&nbsp;&nbsp; &nbsp;V&iacute; dụ: refuses, passes, judges, churches, garages, wishes.</p>\n\n<p>III. C&aacute;c trường hợp đặc biệt</p>\n\n<p>1.&nbsp;&nbsp; &nbsp;Những danh từ sau đ&acirc;y c&oacute; số nhiều đặc biệt:<br />\n&nbsp;&nbsp; &nbsp;man &ndash; men&nbsp;&nbsp; &nbsp;: đ&agrave;n &ocirc;ng<br />\n&nbsp;&nbsp; &nbsp;woman &ndash; women&nbsp;&nbsp; &nbsp;: phụ nữ<br />\n&nbsp;&nbsp; &nbsp;child &ndash; children&nbsp;&nbsp; &nbsp;: trẻ con<br />\n&nbsp;&nbsp; &nbsp;tooth &ndash; teeth&nbsp;&nbsp; &nbsp;: c&aacute;i răng<br />\n&nbsp;&nbsp; &nbsp;foot &ndash; feet&nbsp;&nbsp; &nbsp;: b&agrave;n ch&acirc;n<br />\n&nbsp;&nbsp; &nbsp;mouse &ndash; mice&nbsp;&nbsp; &nbsp;: chuột nhắt<br />\n&nbsp;&nbsp; &nbsp;goose &ndash; geese&nbsp;&nbsp; &nbsp;: con ngỗng<br />\n&nbsp;&nbsp; &nbsp;louse &ndash; lice&nbsp;&nbsp; &nbsp;: con rận<br />\n2.&nbsp;&nbsp; &nbsp;Những danh từ sau đ&acirc;y c&oacute; h&igrave;nh thức số &iacute;t v&agrave; số nhiều giống nhau:<br />\n&nbsp;&nbsp; &nbsp;deer&nbsp;&nbsp; &nbsp;: con nai<br />\n&nbsp;&nbsp; &nbsp;sheep&nbsp;&nbsp; &nbsp;: con cừu<br />\n&nbsp;&nbsp; &nbsp;swine&nbsp;&nbsp; &nbsp;: con heo</p>\n", 
     "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
-    "type" : "normal", 
+    "type" : "ARTICLE", 
     "__v" : NumberInt(0)
 }
 { 
     "_id" : ObjectId("5c758e3be88f912b805e6743"), 
     "createdDate" : ISODate("2019-02-26T19:06:35.001+0000"), 
-    "updatedDate" : ISODate("2019-02-26T22:22:24.037+0000"), 
+    "updatedDate" : ISODate("2019-05-05T01:14:32.224+0000"), 
     "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
     "name" : "Lý thuyết danh từ", 
     "description" : "Bất kỳ ngôn ngữ nào khi phân tích văn phạm của nó đều phải nắm được các từ loại của nó và các biến thể của từ loại này. Trước hết chúng ta tìm hiểu về danh từ là từ loại quen thuộc nhất và đơn giản nhất trong tất cả các ngôn ngữ.", 
     "content" : "<h5>I. Định nghĩa v&agrave; ph&acirc;n loại</h5>\n\n<p style=\"margin-left:40px\">Trong tiếng Anh danh từ gọi l&agrave; Noun.<br />\nDanh từ l&agrave; từ để gọi t&ecirc;n một người, một vật, một sự việc, một t&igrave;nh trạng hay một cảm x&uacute;c.<br />\nDanh từ c&oacute; thể được chia th&agrave;nh hai loại ch&iacute;nh:<br />\nDanh từ cụ thể (concrete nouns): chia l&agrave;m hai loại ch&iacute;nh:<br />\nDanh từ chung (common nouns): l&agrave; danh từ d&ugrave;ng l&agrave;m t&ecirc;n chung cho một loại như: table (c&aacute;i b&agrave;n), man (người đ&agrave;n &ocirc;ng), wall (bức tường)...<br />\nDanh từ ri&ecirc;ng (proper nouns): l&agrave; t&ecirc;n ri&ecirc;ng như: Peter, Jack, England...<br />\nDanh từ trừu tượng (abstract nouns): happiness (sự hạnh ph&uacute;c), beauty (vẻ đẹp), health (sức khỏe)...</p>\n\n<h5>II. Danh từ đếm được v&agrave; kh&ocirc;ng đếm được (countable and uncountable nouns)</h5>\n\n<p style=\"margin-left:40px\">Danh từ đếm được (Countable nouns): Một danh từ được xếp v&agrave;o loại đếm được khi ch&uacute;ng ta c&oacute; thể đếm trực tiếp người hay vật ấy. Phần lớn danh từ cụ thể đều thuộc v&agrave;o loại đếm được.<br />\nV&iacute; dụ: boy (cậu b&eacute;), apple (quả t&aacute;o), book (quyển s&aacute;ch), tree (c&acirc;y)...<br />\nDanh từ kh&ocirc;ng đếm được (Uncountable nouns): Một danh từ được xếp v&agrave;o loại kh&ocirc;ng đếm được khi ch&uacute;ng ta kh&ocirc;ng đếm trực tiếp người hay vật ấy. Muốn đếm, ta phải th&ocirc;ng qua một đơn vị đo lường th&iacute;ch hợp. Phần lớn danh từ trừu tượng đều thuộc v&agrave;o loại kh&ocirc;ng đếm được.<br />\nV&iacute; dụ: meat (thịt), ink (mực), chalk (phấn), water (nước)...</p>\n", 
     "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
-    "type" : "normal", 
+    "type" : "ARTICLE", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5cce70567860dc32740b1d3d"), 
+    "createdDate" : ISODate("2019-05-05T05:10:46.538+0000"), 
+    "updatedDate" : ISODate("2019-05-05T05:10:46.538+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "type" : "PDF", 
+    "name" : "Bài học pdf", 
+    "description" : "lesson 3", 
+    "content" : {
+        "name" : "23e756f0-6ef4-11e9-8a02-996ddefa37e9.pdf", 
+        "audioData" : {
+            "1" : [
+                {
+                    "id" : "1053", 
+                    "left" : "1.2242847681045532", 
+                    "top" : "16.496864318847656", 
+                    "width" : "3.148162364959717", 
+                    "height" : "6.122481822967529"
+                }
+            ], 
+            "3" : [
+                {
+                    "id" : "321", 
+                    "left" : "8.310735702514648", 
+                    "top" : "12.415000915527344", 
+                    "width" : "2.943352222442627", 
+                    "height" : "5.442089080810547"
+                }
+            ], 
+            "4" : [
+                {
+                    "id" : "329", 
+                    "left" : "7.115731239318848", 
+                    "top" : "72.96031188964844", 
+                    "width" : "4.165314674377441", 
+                    "height" : "4.761999607086182"
+                }
+            ], 
+            "5" : [
+                {
+                    "id" : "337", 
+                    "left" : "9.964735984802246", 
+                    "top" : "72.78917694091797", 
+                    "width" : "3.4361400604248047", 
+                    "height" : "5.782324314117432"
+                }
+            ], 
+            "6" : [
+                {
+                    "id" : "345", 
+                    "left" : "51.36989974975586", 
+                    "top" : "35.71422576904297", 
+                    "width" : "4.123274803161621", 
+                    "height" : "5.612306118011475"
+                }, 
+                {
+                    "id" : "348", 
+                    "left" : "8.246685028076172", 
+                    "top" : "72.95919799804688", 
+                    "width" : "3.0924947261810303", 
+                    "height" : "5.612306118011475"
+                }
+            ], 
+            "7" : [
+                {
+                    "id" : "360", 
+                    "left" : "53.94699478149414", 
+                    "top" : "40.64627456665039", 
+                    "width" : "2.9206020832061768", 
+                    "height" : "6.802619934082031"
+                }, 
+                {
+                    "id" : "363", 
+                    "left" : "9.964735984802246", 
+                    "top" : "72.95919799804688", 
+                    "width" : "3.779649019241333", 
+                    "height" : "4.93204402923584"
+                }
+            ], 
+            "8" : [
+                {
+                    "id" : "375", 
+                    "left" : "15.977971076965332", 
+                    "top" : "72.95919799804688", 
+                    "width" : "3.951519250869751", 
+                    "height" : "5.102062225341797"
+                }
+            ], 
+            "9" : [
+                {
+                    "id" : "389", 
+                    "left" : "56.69584274291992", 
+                    "top" : "48.299354553222656", 
+                    "width" : "4.123465538024902", 
+                    "height" : "5.6121110916137695"
+                }, 
+                {
+                    "id" : "390", 
+                    "left" : "13.744383811950684", 
+                    "top" : "61.5645637512207", 
+                    "width" : "3.2643067836761475", 
+                    "height" : "3.4015018939971924"
+                }, 
+                {
+                    "id" : "391", 
+                    "left" : "24.91172981262207", 
+                    "top" : "60.54426574707031", 
+                    "width" : "3.264309883117676", 
+                    "height" : "4.931852340698242"
+                }, 
+                {
+                    "id" : "392", 
+                    "left" : "35.392059326171875", 
+                    "top" : "61.05451202392578", 
+                    "width" : "2.9206020832061768", 
+                    "height" : "4.08157205581665"
+                }, 
+                {
+                    "id" : "395", 
+                    "left" : "10.308341979980469", 
+                    "top" : "72.78917694091797", 
+                    "width" : "3.607992172241211", 
+                    "height" : "5.612113952636719"
+                }
+            ], 
+            "10" : [
+                {
+                    "id" : "419", 
+                    "left" : "8.590291023254395", 
+                    "top" : "72.95919799804688", 
+                    "width" : "3.436100959777832", 
+                    "height" : "4.93204402923584"
+                }
+            ], 
+            "11" : [
+                {
+                    "id" : "433", 
+                    "left" : "14.603546142578125", 
+                    "top" : "60.37405776977539", 
+                    "width" : "2.9206035137176514", 
+                    "height" : "3.061276435852051"
+                }, 
+                {
+                    "id" : "434", 
+                    "left" : "29.8941650390625", 
+                    "top" : "59.86400604248047", 
+                    "width" : "3.608011484146118", 
+                    "height" : "3.9115567207336426"
+                }, 
+                {
+                    "id" : "435", 
+                    "left" : "46.731163024902344", 
+                    "top" : "60.37405776977539", 
+                    "width" : "2.9206080436706543", 
+                    "height" : "3.2312943935394287"
+                }, 
+                {
+                    "id" : "438", 
+                    "left" : "10.308341979980469", 
+                    "top" : "72.61896514892578", 
+                    "width" : "3.4360427856445312", 
+                    "height" : "5.612306118011475"
+                }, 
+                {
+                    "id" : "439", 
+                    "left" : "62.021785736083984", 
+                    "top" : "29.931900024414062", 
+                    "width" : "3.779764175415039", 
+                    "height" : "6.462583541870117"
+                }
+            ], 
+            "12" : [
+                {
+                    "id" : "463", 
+                    "left" : "7.731266975402832", 
+                    "top" : "72.4489517211914", 
+                    "width" : "3.951519250869751", 
+                    "height" : "5.442287921905518"
+                }
+            ], 
+            "13" : [
+                {
+                    "id" : "471", 
+                    "left" : "9.792922973632812", 
+                    "top" : "72.78917694091797", 
+                    "width" : "3.77970552444458", 
+                    "height" : "5.442095756530762"
+                }
+            ], 
+            "14" : [
+                {
+                    "id" : "479", 
+                    "left" : "60.647361755371094", 
+                    "top" : "29.931900024414062", 
+                    "width" : "3.4360620975494385", 
+                    "height" : "5.272080421447754"
+                }, 
+                {
+                    "id" : "490", 
+                    "left" : "27.66077423095703", 
+                    "top" : "45.9183464050293", 
+                    "width" : "2.577094316482544", 
+                    "height" : "3.7415356636047363"
+                }, 
+                {
+                    "id" : "491", 
+                    "left" : "42.607887268066406", 
+                    "top" : "46.42859649658203", 
+                    "width" : "2.2333927154541016", 
+                    "height" : "3.4013099670410156"
+                }, 
+                {
+                    "id" : "492", 
+                    "left" : "12.026391983032227", 
+                    "top" : "63.435333251953125", 
+                    "width" : "2.5771541595458984", 
+                    "height" : "3.7415385246276855"
+                }, 
+                {
+                    "id" : "493", 
+                    "left" : "26.97356414794922", 
+                    "top" : "62.75507354736328", 
+                    "width" : "2.4051449298858643", 
+                    "height" : "4.762025833129883"
+                }, 
+                {
+                    "id" : "494", 
+                    "left" : "41.40522003173828", 
+                    "top" : "63.09530258178711", 
+                    "width" : "2.405142068862915", 
+                    "height" : "4.08157205581665"
+                }, 
+                {
+                    "id" : "497", 
+                    "left" : "8.418479919433594", 
+                    "top" : "72.95919799804688", 
+                    "width" : "3.607913017272949", 
+                    "height" : "4.93204402923584"
+                }
+            ], 
+            "15" : [
+                {
+                    "id" : "531", 
+                    "left" : "63.224456787109375", 
+                    "top" : "32.99317932128906", 
+                    "width" : "2.233586549758911", 
+                    "height" : "4.93204402923584"
+                }, 
+                {
+                    "id" : "542", 
+                    "left" : "13.744383811950684", 
+                    "top" : "51.020408630371094", 
+                    "width" : "2.7490437030792236", 
+                    "height" : "3.2312943935394287"
+                }, 
+                {
+                    "id" : "543", 
+                    "left" : "28.347986221313477", 
+                    "top" : "50.85039138793945", 
+                    "width" : "2.748849868774414", 
+                    "height" : "3.4013099670410156"
+                }, 
+                {
+                    "id" : "544", 
+                    "left" : "43.29510498046875", 
+                    "top" : "51.020408630371094", 
+                    "width" : "2.9206020832061768", 
+                    "height" : "2.8910632133483887"
+                }, 
+                {
+                    "id" : "545", 
+                    "left" : "20.9602108001709", 
+                    "top" : "64.79585266113281", 
+                    "width" : "3.0925543308258057", 
+                    "height" : "3.5715200901031494"
+                }, 
+                {
+                    "id" : "546", 
+                    "left" : "36.42278289794922", 
+                    "top" : "64.62583923339844", 
+                    "width" : "2.748849868774414", 
+                    "height" : "3.9115536212921143"
+                }, 
+                {
+                    "id" : "547", 
+                    "left" : "10.480154991149902", 
+                    "top" : "73.46943664550781", 
+                    "width" : "2.920720100402832", 
+                    "height" : "3.9115567207336426"
+                }
+            ], 
+            "16" : [
+                {
+                    "id" : "579", 
+                    "left" : "60.647361755371094", 
+                    "top" : "24.319793701171875", 
+                    "width" : "3.779764175415039", 
+                    "height" : "5.952342510223389"
+                }, 
+                {
+                    "id" : "598", 
+                    "left" : "9.105710983276367", 
+                    "top" : "48.469383239746094", 
+                    "width" : "2.5770750045776367", 
+                    "height" : "3.5715200901031494"
+                }, 
+                {
+                    "id" : "599", 
+                    "left" : "19.757736206054688", 
+                    "top" : "48.299354553222656", 
+                    "width" : "3.092360496520996", 
+                    "height" : "3.4013099670410156"
+                }, 
+                {
+                    "id" : "600", 
+                    "left" : "31.784048080444336", 
+                    "top" : "48.639400482177734", 
+                    "width" : "2.748849868774414", 
+                    "height" : "2.8912582397460938"
+                }, 
+                {
+                    "id" : "601", 
+                    "left" : "42.95140075683594", 
+                    "top" : "48.639400482177734", 
+                    "width" : "2.9207992553710938", 
+                    "height" : "3.5715200901031494"
+                }, 
+                {
+                    "id" : "602", 
+                    "left" : "9.44931697845459", 
+                    "top" : "64.28580474853516", 
+                    "width" : "2.233468770980835", 
+                    "height" : "3.4013099670410156"
+                }, 
+                {
+                    "id" : "603", 
+                    "left" : "20.40523910522461", 
+                    "top" : "64.07318878173828", 
+                    "width" : "2.676077365875244", 
+                    "height" : "3.642392635345459"
+                }, 
+                {
+                    "id" : "604", 
+                    "left" : "30.942296981811523", 
+                    "top" : "64.23875427246094", 
+                    "width" : "2.843334436416626", 
+                    "height" : "3.476829767227173"
+                }, 
+                {
+                    "id" : "605", 
+                    "left" : "41.47936248779297", 
+                    "top" : "64.07318878173828", 
+                    "width" : "2.843334436416626", 
+                    "height" : "3.9735171794891357"
+                }, 
+                {
+                    "id" : "606", 
+                    "left" : "53.68897247314453", 
+                    "top" : "64.07318878173828", 
+                    "width" : "2.5088202953338623", 
+                    "height" : "3.807954788208008"
+                }, 
+                {
+                    "id" : "609", 
+                    "left" : "7.693766117095947", 
+                    "top" : "72.51692199707031", 
+                    "width" : "4.0141191482543945", 
+                    "height" : "5.6293463706970215"
+                }
+            ], 
+            "17" : [
+                {
+                    "id" : "657", 
+                    "left" : "63.55720901489258", 
+                    "top" : "21.192100524902344", 
+                    "width" : "3.67960786819458", 
+                    "height" : "5.1326584815979"
+                }, 
+                {
+                    "id" : "668", 
+                    "left" : "14.603546142578125", 
+                    "top" : "63.94557571411133", 
+                    "width" : "3.092357635498047", 
+                    "height" : "2.551032543182373"
+                }, 
+                {
+                    "id" : "669", 
+                    "left" : "25.94264793395996", 
+                    "top" : "63.77556228637695", 
+                    "width" : "2.577094316482544", 
+                    "height" : "3.4013099670410156"
+                }, 
+                {
+                    "id" : "670", 
+                    "left" : "37.1099967956543", 
+                    "top" : "63.60535430908203", 
+                    "width" : "2.577094316482544", 
+                    "height" : "3.7415356636047363"
+                }, 
+                {
+                    "id" : "671", 
+                    "left" : "48.62104797363281", 
+                    "top" : "63.435333251953125", 
+                    "width" : "2.9206020832061768", 
+                    "height" : "3.9115536212921143"
+                }, 
+                {
+                    "id" : "672", 
+                    "left" : "59.44469451904297", 
+                    "top" : "63.60535430908203", 
+                    "width" : "2.405339002609253", 
+                    "height" : "3.7415356636047363"
+                }, 
+                {
+                    "id" : "675", 
+                    "left" : "10.480154991149902", 
+                    "top" : "72.2789306640625", 
+                    "width" : "2.920720100402832", 
+                    "height" : "5.102062225341797"
+                }
+            ], 
+            "18" : [
+                {
+                    "id" : "707", 
+                    "left" : "65.45803833007812", 
+                    "top" : "19.217735290527344", 
+                    "width" : "2.748849868774414", 
+                    "height" : "6.462583541870117"
+                }, 
+                {
+                    "id" : "710", 
+                    "left" : "64.77082824707031", 
+                    "top" : "46.42859649658203", 
+                    "width" : "4.638729095458984", 
+                    "height" : "5.2720746994018555"
+                }, 
+                {
+                    "id" : "729", 
+                    "left" : "12.198205947875977", 
+                    "top" : "49.99992370605469", 
+                    "width" : "2.9206020832061768", 
+                    "height" : "3.4015047550201416"
+                }, 
+                {
+                    "id" : "730", 
+                    "left" : "25.427188873291016", 
+                    "top" : "50.510169982910156", 
+                    "width" : "2.9207992553710938", 
+                    "height" : "2.381011486053467"
+                }, 
+                {
+                    "id" : "731", 
+                    "left" : "38.31266403198242", 
+                    "top" : "49.82990646362305", 
+                    "width" : "3.0925543308258057", 
+                    "height" : "3.2312889099121094"
+                }, 
+                {
+                    "id" : "732", 
+                    "left" : "50.682682037353516", 
+                    "top" : "49.82990646362305", 
+                    "width" : "2.9206020832061768", 
+                    "height" : "3.5715200901031494"
+                }, 
+                {
+                    "id" : "733", 
+                    "left" : "11.854598999023438", 
+                    "top" : "64.28580474853516", 
+                    "width" : "2.7489469051361084", 
+                    "height" : "3.7413432598114014"
+                }, 
+                {
+                    "id" : "734", 
+                    "left" : "22.678340911865234", 
+                    "top" : "64.45582580566406", 
+                    "width" : "2.748849868774414", 
+                    "height" : "3.5713250637054443"
+                }, 
+                {
+                    "id" : "735", 
+                    "left" : "35.392059326171875", 
+                    "top" : "64.62583923339844", 
+                    "width" : "2.748849868774414", 
+                    "height" : "3.061276435852051"
+                }, 
+                {
+                    "id" : "736", 
+                    "left" : "47.07467269897461", 
+                    "top" : "63.94557571411133", 
+                    "width" : "2.405339002609253", 
+                    "height" : "4.08157205581665"
+                }, 
+                {
+                    "id" : "737", 
+                    "left" : "7.731266975402832", 
+                    "top" : "72.2789306640625", 
+                    "width" : "4.123332500457764", 
+                    "height" : "5.782324314117432"
+                }
+            ], 
+            "19" : [
+                {
+                    "id" : "785", 
+                    "left" : "10.136529922485352", 
+                    "top" : "72.2789306640625", 
+                    "width" : "3.4360992908477783", 
+                    "height" : "5.442095756530762"
+                }
+            ], 
+            "20" : [
+                {
+                    "id" : "793", 
+                    "left" : "7.731266975402832", 
+                    "top" : "73.12921142578125", 
+                    "width" : "4.638751029968262", 
+                    "height" : "4.081764221191406"
+                }
+            ], 
+            "21" : [
+                {
+                    "id" : "801", 
+                    "left" : "9.964735984802246", 
+                    "top" : "72.61896514892578", 
+                    "width" : "3.4361400604248047", 
+                    "height" : "5.612306118011475"
+                }
+            ], 
+            "22" : [
+                {
+                    "id" : "809", 
+                    "left" : "7.387640953063965", 
+                    "top" : "72.2789306640625", 
+                    "width" : "4.638751029968262", 
+                    "height" : "5.612306118011475"
+                }
+            ], 
+            "23" : [
+                {
+                    "id" : "835", 
+                    "left" : "63.05270767211914", 
+                    "top" : "24.48980712890625", 
+                    "width" : "3.436056137084961", 
+                    "height" : "5.952342510223389"
+                }, 
+                {
+                    "id" : "836", 
+                    "left" : "14.603546142578125", 
+                    "top" : "51.36064147949219", 
+                    "width" : "2.9206035137176514", 
+                    "height" : "3.2312889099121094"
+                }, 
+                {
+                    "id" : "837", 
+                    "left" : "29.035198211669922", 
+                    "top" : "51.36064147949219", 
+                    "width" : "3.2643067836761475", 
+                    "height" : "3.2312889099121094"
+                }, 
+                {
+                    "id" : "838", 
+                    "left" : "42.95140075683594", 
+                    "top" : "51.020408630371094", 
+                    "width" : "2.5770974159240723", 
+                    "height" : "4.251782417297363"
+                }, 
+                {
+                    "id" : "839", 
+                    "left" : "13.400875091552734", 
+                    "top" : "65.30609893798828", 
+                    "width" : "2.4053406715393066", 
+                    "height" : "3.061276435852051"
+                }, 
+                {
+                    "id" : "840", 
+                    "left" : "24.39647102355957", 
+                    "top" : "65.1360855102539", 
+                    "width" : "2.577094316482544", 
+                    "height" : "3.7415356636047363"
+                }, 
+                {
+                    "id" : "841", 
+                    "left" : "36.59453582763672", 
+                    "top" : "64.966064453125", 
+                    "width" : "2.749046802520752", 
+                    "height" : "4.2515869140625"
+                }, 
+                {
+                    "id" : "842", 
+                    "left" : "48.105587005615234", 
+                    "top" : "65.1360855102539", 
+                    "width" : "2.748849868774414", 
+                    "height" : "3.5713250637054443"
+                }, 
+                {
+                    "id" : "843", 
+                    "left" : "59.27293395996094", 
+                    "top" : "64.966064453125", 
+                    "width" : "2.748849868774414", 
+                    "height" : "3.7413432598114014"
+                }, 
+                {
+                    "id" : "844", 
+                    "left" : "9.621129035949707", 
+                    "top" : "72.61896514892578", 
+                    "width" : "3.9514999389648438", 
+                    "height" : "5.442290782928467"
+                }
+            ], 
+            "24" : [
+                {
+                    "id" : "888", 
+                    "left" : "8.432836532592773", 
+                    "top" : "72.91329956054688", 
+                    "width" : "3.61405611038208", 
+                    "height" : "4.769965171813965"
+                }
+            ], 
+            "25" : [
+                {
+                    "id" : "901", 
+                    "left" : "9.63752269744873", 
+                    "top" : "72.57249450683594", 
+                    "width" : "3.958190679550171", 
+                    "height" : "5.110773086547852"
+                }
+            ], 
+            "26" : [
+                {
+                    "id" : "909", 
+                    "left" : "34.7639274597168", 
+                    "top" : "12.776832580566406", 
+                    "width" : "3.6140739917755127", 
+                    "height" : "5.451391220092773"
+                }, 
+                {
+                    "id" : "918", 
+                    "left" : "4.9908671379089355", 
+                    "top" : "18.058013916015625", 
+                    "width" : "3.441969394683838", 
+                    "height" : "5.451391220092773"
+                }, 
+                {
+                    "id" : "919", 
+                    "left" : "5.507167816162109", 
+                    "top" : "28.27936553955078", 
+                    "width" : "2.925668954849243", 
+                    "height" : "5.621796607971191"
+                }, 
+                {
+                    "id" : "920", 
+                    "left" : "4.302461624145508", 
+                    "top" : "38.50092315673828", 
+                    "width" : "4.474567413330078", 
+                    "height" : "4.769965171813965"
+                }, 
+                {
+                    "id" : "921", 
+                    "left" : "4.818761348724365", 
+                    "top" : "43.611698150634766", 
+                    "width" : "4.4745683670043945", 
+                    "height" : "5.451385498046875"
+                }
+            ], 
+            "27" : [
+                {
+                    "id" : "945", 
+                    "left" : "22.889022827148438", 
+                    "top" : "12.265815734863281", 
+                    "width" : "3.614077091217041", 
+                    "height" : "5.792196273803711"
+                }, 
+                {
+                    "id" : "954", 
+                    "left" : "6.539745807647705", 
+                    "top" : "18.39862823486328", 
+                    "width" : "3.441969394683838", 
+                    "height" : "5.451391220092773"
+                }, 
+                {
+                    "id" : "955", 
+                    "left" : "5.851360321044922", 
+                    "top" : "27.938751220703125", 
+                    "width" : "4.30246114730835", 
+                    "height" : "5.621796607971191"
+                }, 
+                {
+                    "id" : "956", 
+                    "left" : "6.711851596832275", 
+                    "top" : "43.611698150634766", 
+                    "width" : "3.6140754222869873", 
+                    "height" : "5.280980110168457"
+                }, 
+                {
+                    "id" : "957", 
+                    "left" : "2.2372841835021973", 
+                    "top" : "58.77341842651367", 
+                    "width" : "3.7861626148223877", 
+                    "height" : "6.133006572723389"
+                }
+            ]
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ccec30671637f290454d5dd"), 
+    "createdDate" : ISODate("2019-05-05T11:03:34.349+0000"), 
+    "updatedDate" : ISODate("2019-05-05T11:03:34.349+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "type" : "PDF", 
+    "name" : "Bài học pdf 2", 
+    "description" : "lesson 2", 
+    "content" : {
+        "name" : "6ce8f3f0-6f25-11e9-97a8-ad0f48b84b68.pdf", 
+        "audioData" : {
+            "1" : [
+                {
+                    "id" : "1179", 
+                    "left" : "1.2030845880508423", 
+                    "top" : "5.207115173339844", 
+                    "width" : "5.232290744781494", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "2" : [
+                {
+                    "id" : "595", 
+                    "left" : "5.956226825714111", 
+                    "top" : "22.81267547607422", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "3" : [
+                {
+                    "id" : "607", 
+                    "left" : "7.351804733276367", 
+                    "top" : "5.177268981933594", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "608", 
+                    "left" : "7.351804733276367", 
+                    "top" : "10.607635498046875", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.139582633972168"
+                }, 
+                {
+                    "id" : "609", 
+                    "left" : "7.351804733276367", 
+                    "top" : "15.787498474121094", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "4" : [
+                {
+                    "id" : "624", 
+                    "left" : "7.351804733276367", 
+                    "top" : "5.605560302734375", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.139931678771973"
+                }, 
+                {
+                    "id" : "625", 
+                    "left" : "7.351804733276367", 
+                    "top" : "10.701728820800781", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "626", 
+                    "left" : "7.13960599899292", 
+                    "top" : "20.781776428222656", 
+                    "width" : "5.145393371582031", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "5" : [
+                {
+                    "id" : "641", 
+                    "left" : "6.979050636291504", 
+                    "top" : "5.281951904296875", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "642", 
+                    "left" : "7.173934459686279", 
+                    "top" : "15.641143798828125", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "643", 
+                    "left" : "7.2017364501953125", 
+                    "top" : "20.674652099609375", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "6" : [
+                {
+                    "id" : "658", 
+                    "left" : "6.728287220001221", 
+                    "top" : "5.4698028564453125", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "659", 
+                    "left" : "7.257338047027588", 
+                    "top" : "16.205032348632812", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "660", 
+                    "left" : "7.285138130187988", 
+                    "top" : "21.36370849609375", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "7" : [
+                {
+                    "id" : "675", 
+                    "left" : "6.561040878295898", 
+                    "top" : "5.594978332519531", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "676", 
+                    "left" : "6.672383785247803", 
+                    "top" : "15.515617370605469", 
+                    "width" : "5.145392417907715", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "677", 
+                    "left" : "6.78416633605957", 
+                    "top" : "21.865280151367188", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "8" : [
+                {
+                    "id" : "692", 
+                    "left" : "6.533518314361572", 
+                    "top" : "5.730903625488281", 
+                    "width" : "5.145392417907715", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "693", 
+                    "left" : "6.979050636291504", 
+                    "top" : "16.027603149414062", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "694", 
+                    "left" : "7.257476329803467", 
+                    "top" : "21.31163787841797", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "9" : [
+                {
+                    "id" : "709", 
+                    "left" : "5.781504154205322", 
+                    "top" : "5.8248291015625", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "710", 
+                    "left" : "6.143472194671631", 
+                    "top" : "16.12152862548828", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "711", 
+                    "left" : "6.254814624786377", 
+                    "top" : "20.967010498046875", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "10" : [
+                {
+                    "id" : "726", 
+                    "left" : "6.366156578063965", 
+                    "top" : "5.44879150390625", 
+                    "width" : "5.145393371582031", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "727", 
+                    "left" : "6.477499961853027", 
+                    "top" : "16.058685302734375", 
+                    "width" : "5.145393371582031", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "728", 
+                    "left" : "6.366434574127197", 
+                    "top" : "21.364059448242188", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "729", 
+                    "left" : "6.28289270401001", 
+                    "top" : "26.501914978027344", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "730", 
+                    "left" : "6.3942365646362305", 
+                    "top" : "31.973960876464844", 
+                    "width" : "5.145392417907715", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "11" : [
+                {
+                    "id" : "753", 
+                    "left" : "5.837245464324951", 
+                    "top" : "5.365455627441406", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "754", 
+                    "left" : "6.032129764556885", 
+                    "top" : "10.837486267089844", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "755", 
+                    "left" : "6.227014064788818", 
+                    "top" : "15.933509826660156", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "756", 
+                    "left" : "6.5054402351379395", 
+                    "top" : "25.60364532470703", 
+                    "width" : "5.145392417907715", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "12" : [
+                {
+                    "id" : "775", 
+                    "left" : "8.1483793258667", 
+                    "top" : "9.605026245117188", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "776", 
+                    "left" : "8.343263626098633", 
+                    "top" : "17.520660400390625", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "777", 
+                    "left" : "8.455022811889648", 
+                    "top" : "66.72795104980469", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "13" : [
+                {
+                    "id" : "804", 
+                    "left" : "8.455022811889648", 
+                    "top" : "10.398948669433594", 
+                    "width" : "5.145394325256348", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "805", 
+                    "left" : "8.39928150177002", 
+                    "top" : "38.55295181274414", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "806", 
+                    "left" : "8.343541145324707", 
+                    "top" : "72.33177185058594", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }
+            ]
+        }
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ccec36771637f290454d5de"), 
+    "createdDate" : ISODate("2019-05-05T11:05:11.226+0000"), 
+    "updatedDate" : ISODate("2019-05-05T11:05:11.226+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "type" : "PDF", 
+    "name" : "Bài học pdf 7", 
+    "description" : "lesson 7", 
+    "content" : {
+        "name" : "a6a9cdd0-6f25-11e9-97a8-ad0f48b84b68.pdf", 
+        "audioData" : {
+            "1" : [
+                {
+                    "id" : "390", 
+                    "left" : "1.3745825290679932", 
+                    "top" : "3.7300338745117188", 
+                    "width" : "5.157690525054932", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "2" : [
+                {
+                    "id" : "132", 
+                    "left" : "15.919676780700684", 
+                    "top" : "14.247047424316406", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "3" : [
+                {
+                    "id" : "141", 
+                    "left" : "3.9278011322021484", 
+                    "top" : "7.5840301513671875", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975191116333"
+                }
+            ], 
+            "4" : [
+                {
+                    "id" : "148", 
+                    "left" : "4.339444160461426", 
+                    "top" : "7.659721374511719", 
+                    "width" : "5.145346641540527", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "5" : [
+                {
+                    "id" : "155", 
+                    "left" : "3.695162057876587", 
+                    "top" : "7.293060302734375", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "6" : [
+                {
+                    "id" : "162", 
+                    "left" : "4.2908101081848145", 
+                    "top" : "7.7397613525390625", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "7" : [
+                {
+                    "id" : "169", 
+                    "left" : "3.9540510177612305", 
+                    "top" : "8.069961547851562", 
+                    "width" : "5.1453704833984375", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "170", 
+                    "left" : "61.8638916015625", 
+                    "top" : "69.22065734863281", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "171", 
+                    "left" : "61.22291564941406", 
+                    "top" : "59.35139083862305", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.139754772186279"
+                }, 
+                {
+                    "id" : "172", 
+                    "left" : "55.367820739746094", 
+                    "top" : "54.37968826293945", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "8" : [
+                {
+                    "id" : "191", 
+                    "left" : "3.202685832977295", 
+                    "top" : "8.0892333984375", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "192", 
+                    "left" : "5.196967124938965", 
+                    "top" : "54.806941986083984", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "9" : [
+                {
+                    "id" : "203", 
+                    "left" : "3.3062033653259277", 
+                    "top" : "7.933685302734375", 
+                    "width" : "5.145346641540527", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "10" : [
+                {
+                    "id" : "210", 
+                    "left" : "3.28025484085083", 
+                    "top" : "8.030906677246094", 
+                    "width" : "5.145346641540527", 
+                    "height" : "4.1397624015808105"
+                }
+            ], 
+            "11" : [
+                {
+                    "id" : "217", 
+                    "left" : "2.6326849460601807", 
+                    "top" : "7.780731201171875", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "218", 
+                    "left" : "3.876504421234131", 
+                    "top" : "50.08698272705078", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "12" : [
+                {
+                    "id" : "229", 
+                    "left" : "5.275137901306152", 
+                    "top" : "12.673965454101562", 
+                    "width" : "5.14534854888916", 
+                    "height" : "4.13975191116333"
+                }, 
+                {
+                    "id" : "230", 
+                    "left" : "4.622106075286865", 
+                    "top" : "66.85104370117188", 
+                    "width" : "4.989954471588135", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "231", 
+                    "left" : "5.223240852355957", 
+                    "top" : "20.210769653320312", 
+                    "width" : "5.145346641540527", 
+                    "height" : "4.13975715637207"
+                }
+            ], 
+            "13" : [
+                {
+                    "id" : "259", 
+                    "left" : "5.508078575134277", 
+                    "top" : "13.079330444335938", 
+                    "width" : "5.145371437072754", 
+                    "height" : "4.1397624015808105"
+                }, 
+                {
+                    "id" : "260", 
+                    "left" : "5.015925884246826", 
+                    "top" : "40.10226058959961", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }, 
+                {
+                    "id" : "261", 
+                    "left" : "5.456181049346924", 
+                    "top" : "74.58211517333984", 
+                    "width" : "5.145369529724121", 
+                    "height" : "4.13975715637207"
+                }
+            ]
+        }
+    }, 
     "__v" : NumberInt(0)
 }

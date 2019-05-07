@@ -21,8 +21,8 @@ function configEvents() {
                 changeTab('document', 'document_view_doc');
                 break;
 
-            case constants.DOCUMENT.TYPE.PDF:                                           
-                window.open("/pdfs/web/viewer?id="+ data._id ); 
+            case constants.DOCUMENT.TYPE.PDF:
+                window.open("/pdfs/web/viewer?id=" + data._id);
                 break;
             default: {
 
@@ -66,9 +66,8 @@ function showDoExerListenAndRewrite(data) {
     // let btnAddItem = mainDiv.find('[name=btn-add]');
     let divList = mainDiv.find('[name=div-list]');
     // let btnAddExer = mainDiv.find('[name=btn-add-exer]');
-
-    // mainDiv.find('input[name="txt-name"]').val(data.name);
-    // mainDiv.find('input[name="txt-des"]').val(data.description);
+    mainDiv.find('h4').html(data.name);
+    mainDiv.find('h5').html(data.description);
     mainDiv.data('exercise', data);
 
     divList.empty();
@@ -104,8 +103,8 @@ function showDoExerFillMissingWords(data) {
     let divParagraph = mainDiv.find('[name=paragraph]');
     // let btnAddExer = mainDiv.find('[name=btn-add-exer]');
 
-    // mainDiv.find('input[name="txt-name"]').val(data.name);
-    // mainDiv.find('input[name="txt-des"]').val(data.description);
+    mainDiv.find('h4').html(data.name);
+    mainDiv.find('h5').html(data.description);
     mainDiv.data('exercise', data);
     divParagraph.html(data.content.paragraph);
 
@@ -214,12 +213,14 @@ function configDoExerListenAndRewrite() {
     let btnSubmit = mainDiv.find('[name=btn-submit]');
 
     mainDiv.on('click', '.listen-and-rewrite-box .btn-listen', function (e) {
-        let url = '/audios/' + $(e.target).parent().parent().parent().data('itemdata').audio;
-        new Audio(url).play();
-    });
 
-    mainDiv.on('click', '.listen-and-rewrite-box .btn-listen', function (e) {
-        let url = '/audios/' + $(e.target).parent().parent().parent().data('itemdata').audio;
+        let target = $(e.target);
+
+        while (!target.is("button")) {
+            target = target.parent();
+        }
+
+        const url = '/audios/' + target.parent().parent().parent().data('itemdata').audio;
         new Audio(url).play();
     });
 

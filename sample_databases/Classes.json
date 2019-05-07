@@ -3,37 +3,44 @@
     "name" : "Tiếng anh vỡ lòng 1", 
     "index" : "", 
     "createdDate" : "", 
-    "createdBy" : "5c74391e55cd132410c04153", 
-    "updatedDate" : "", 
-    "type" : "public"
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "updatedDate" : ISODate("2019-05-07T03:49:35.712+0000"), 
+    "type" : "PRIVATE", 
+    "description" : "Tiếng anh vỡ lòng 1", 
+    "students" : [
+        "5c75a829f9d44131c4c045c0", 
+        "5cd0d928e9301a2dacb722c6", 
+        "5cd0e60b216fde0638679f52"
+    ], 
+    "__v" : NumberInt(3)
 }
 { 
     "_id" : ObjectId("5c806574dd0c960c3084b296"), 
     "name" : "Tiếng anh cơ bản 1", 
-    "type" : "public", 
-    "createdBy" : "5c74391e55cd132410c04153"
+    "type" : "PUBLIC", 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153")
 }
 { 
     "_id" : ObjectId("5c806588dd0c960c3084b299"), 
     "name" : "Tiếng anh cơ bản 2", 
-    "type" : "public", 
-    "createdBy" : "5c75a829f9d44131c4c045c0"
+    "type" : "PUBLIC", 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0")
 }
 { 
     "_id" : ObjectId("5c8065a5dd0c960c3084b29c"), 
     "name" : "Tiếng anh tiểu học 1", 
-    "type" : "public", 
-    "createdBy" : "5c75a829f9d44131c4c045c0"
+    "type" : "PUBLIC", 
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0")
 }
 { 
     "_id" : ObjectId("5c8065eadd0c960c3084b2b0"), 
     "name" : "Tiếng anh vỡ lòng 2", 
-    "createdBy" : "5c74391e55cd132410c04153", 
-    "type" : "public"
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "type" : "PUBLIC"
 }
 { 
     "_id" : ObjectId("5c806e9fdd0c960c3084b2b8"), 
     "name" : "Tiếng anh chuyên ngành", 
-    "createdBy" : "5c75a829f9d44131c4c045c0", 
-    "type" : "public"
+    "createdBy" : ObjectId("5c75a829f9d44131c4c045c0"), 
+    "type" : "PUBLIC"
 }

@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage, limits: { fileSize: 50000000 } });
 
-router.post('/', upload.array('files', 12), async function(req, res, next) {
+router.post('/', upload.array('files'), async function(req, res, next) {
     console.log(req.body);
 
     let result = { status: 200 };
@@ -70,7 +70,7 @@ router.post('/', upload.array('files', 12), async function(req, res, next) {
                             if (!exist) {
                                 exer.content.push({
                                     text: req.body.texts[i],
-                                    audio: req.files[i].filename,
+                                    audio: req.files[fileIdx].filename,
                                     audioId: uuid()
                                 });
                                 fileIdx++;

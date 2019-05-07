@@ -1,7 +1,7 @@
 { 
     "_id" : ObjectId("5c7d50951526a619504784d4"), 
     "createdDate" : ISODate("2019-03-04T16:21:41.737+0000"), 
-    "updatedDate" : ISODate("2019-03-07T00:46:05.307+0000"), 
+    "updatedDate" : ISODate("2019-05-07T03:50:40.999+0000"), 
     "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
     "name" : "Bài tập cho phần danh từ", 
     "description" : "Bài tập loại nghe và điền lại", 
@@ -9,12 +9,12 @@
     "type" : "LISTEN_AND_REWRITE", 
     "content" : [
         {
-            "text" : "b", 
+            "text" : "door", 
             "audio" : "9845f230-3e99-11e9-8d98-833e4f9dfbee.wav", 
             "audioId" : "9849e9d1-3e99-11e9-8d98-833e4f9dfbee"
         }, 
         {
-            "text" : "c", 
+            "text" : "house", 
             "audio" : "98466760-3e99-11e9-8d98-833e4f9dfbee.WAV", 
             "audioId" : "9849e9d2-3e99-11e9-8d98-833e4f9dfbee"
         }
@@ -47,5 +47,137 @@
             "audioId" : "510b1bd2-4073-11e9-8ece-7d9559d8bab8"
         }
     ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5cbdefacbba6f539d44fde74"), 
+    "createdDate" : ISODate("2019-04-22T16:45:32.972+0000"), 
+    "updatedDate" : ISODate("2019-04-25T00:25:16.394+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "name" : "Mẹo điền từ vào đoạn văn", 
+    "description" : "Ví dụ bài tập mẹo điền từ vào đoạn văn", 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "type" : "FILL_MISSING_WORDS", 
+    "content" : {
+        "paragraph" : "<html><head></head><body><p style=\"margin-left:40px; text-align:justify\">Approximately 350 million people speak English as their first&#xA0;<input type=\"text\" data-textid=\"99709ff0-66f0-11e9-8c6a-3dc3bf89673c\"> . About the same number use it <input type=\"text\" data-textid=\"99709ff1-66f0-11e9-8c6a-3dc3bf89673c\"> a second language. It is the language ___(3)___ aviation, international sport and world trade. 75% of the world&apos;s mail is in English, 60% of the world&apos;s radio stations broadcast in English, and more than half of the world&apos;s newspapers are<input type=\"text\" data-textid=\"99709ff2-66f0-11e9-8c6a-3dc3bf89673c\"> in English. It is an official language in 44 countries. In <input type=\"text\" data-textid=\"9970c700-66f0-11e9-8c6a-3dc3bf89673c\"> others, it is the language of business, commerce and technology. There are many varieties of English, but Scottish, Australian, Indian and Jamaican speakers of English, in spite of the differences in pronunciation, structure and vocabulary, would recognize that they are all speaking the same basic language.</p>\n</body></html>", 
+        "texts" : [
+            {
+                "text" : null, 
+                "textId" : "99709ff0-66f0-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : null, 
+                "textId" : "99709ff1-66f0-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : null, 
+                "textId" : "99709ff2-66f0-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : null, 
+                "textId" : "9970c700-66f0-11e9-8c6a-3dc3bf89673c"
+            }
+        ]
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5cbdf0cb5736de1d8c951365"), 
+    "createdDate" : ISODate("2019-04-22T16:50:19.169+0000"), 
+    "updatedDate" : ISODate("2019-04-25T00:16:50.704+0000"), 
+    "createdBy" : ObjectId("5c74391e55cd132410c04153"), 
+    "name" : "Bài tập đặt câu hỏi cho từ gạch chân", 
+    "description" : "Make questions for the underlined words or phrases", 
+    "classId" : ObjectId("5c7500dfdd0c961e0045058b"), 
+    "type" : "FILL_MISSING_WORDS", 
+    "content" : {
+        "paragraph" : "<html><head></head><body><p>1. The dictionary is <u>200,000dong</u>.</p>\n\n<p><input maxlength=\"150\" type=\"text\" data-textid=\"6c0d2b10-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>2. I made it <u>from a piece of wood</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0d5220-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>3. She bought it <u>at the shop over there</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0d7930-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>4. <u>No, I wasn&#x2019;t</u>. (I was tired after the trip.)</p>\n\n<p><input type=\"text\" data-textid=\"6c0d7931-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>5. It took her <u>three hours</u> to finish the composition.</p>\n\n<p><input type=\"text\" data-textid=\"6c0d7932-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>6. I need a phone card <u>to phone my parents</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0d7933-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>7. It&#x2019;s <u>about 1,500 km</u> from Hue to Ho Chi Minh City.</p>\n\n<p><input type=\"text\" data-textid=\"6c0d7934-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>8. The bank is <u>opposite the restaurant</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0d7935-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>9. The dress looked <u>very nice</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0da040-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>10. I saw <u>her</u> <u>last night</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0da041-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>11. Her neighbor gave <u>her</u> <u>a nice dress</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0da042-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>12. They r<u>eturned to America</u> <u>two weeks ago</u>.<br>\n<input type=\"text\" data-textid=\"6c0dc750-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>13. <u>Mrs. Robinson</u> bought <u>a poster</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc751-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>14. My father was <u>in Ha Noi</u> last month.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc752-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>15. He traveled to Nha Trang <u>by coach</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc753-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>16. She went to the doctor <u>because she was sick</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc754-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>17. Nam left home <u>at 7 o&apos;clock</u> yesterday.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc755-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>18. He <u>taught English</u> in the high school.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc756-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>19. The homework was <u>very difficult</u> yesterday.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dc757-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>20. She often does the housework <u>after doing exercises</u>.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dee60-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>21. They are planting <u>some</u> roses in the garden.</p>\n\n<p><input type=\"text\" data-textid=\"6c0dee61-66ef-11e9-8c6a-3dc3bf89673c\"></p>\n\n<p>22. Liz will send these letters to <u>her friends</u>.</p>\n</body></html>", 
+        "texts" : [
+            {
+                "text" : "", 
+                "textId" : "6c0d2b10-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d5220-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d7930-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d7931-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d7932-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d7933-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d7934-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0d7935-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0da040-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0da041-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0da042-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc750-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc751-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc752-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc753-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc754-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc755-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc756-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dc757-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dee60-66ef-11e9-8c6a-3dc3bf89673c"
+            }, 
+            {
+                "text" : "", 
+                "textId" : "6c0dee61-66ef-11e9-8c6a-3dc3bf89673c"
+            }
+        ]
+    }, 
     "__v" : NumberInt(0)
 }
