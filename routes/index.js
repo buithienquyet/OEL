@@ -7,6 +7,7 @@ const Class = require('../databases/mongodb/models/Class');
 const multer = require('multer');
 const path = require('path');
 const uuid = require('uuid/v1');
+const constants = require('../utils/constants');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -22,7 +23,7 @@ const upload = multer({ storage, limits: { fileSize: 50000000 } });
 /* GET home page. */
 router.get('/', async function (req, res, next) {
 
-    let result = await Class.find({ type: 'public' });
+    let result = await Class.find({ type: constants.CLASS.TYPE.PUBLIC }).limit(5);
 
     res.render('index', { user: req.user, classes: result });
 });
@@ -100,6 +101,8 @@ router.post('/register', async function (req, res) {
         user.firstName = body.firstname;
         user.lastName = body.lastname;
         user.email = body.email;
+        user.phoneNumber = body.phoneNumber;
+        user.avatarUrl = "default.png";
         user.address = body.address;
         user.createdDate = new Date();
 

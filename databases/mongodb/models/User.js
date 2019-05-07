@@ -7,11 +7,20 @@ schema = new Schema({
     password: String,
     firstName: String,
     lastName: String,
-    phoneNumber: String,
-    address: String,
+    phoneNumber: {
+        type: String,
+        default: ''
+    },
+    address: {
+        type: String,
+        default: ''
+    },
     lastLoginTime: Date,
     birthday: Date,
-    email: String,
+    email: {
+        type: String,
+        default: ''
+    },
     gender: String,
     updatedDate: Date,
     createdDate: Date,
@@ -19,7 +28,7 @@ schema = new Schema({
     avatarUrl: String,
 });
 
-schema.methods.isValidPassword = function(password) {
+schema.methods.isValidPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
 }
 

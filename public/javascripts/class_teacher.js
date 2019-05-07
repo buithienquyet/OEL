@@ -218,15 +218,15 @@ function configEditDocumentPdf() {
         const id = txtId.val();
 
         if (id && id.trim() != '')
-            data.append('id', id);        
+            data.append('id', id);
         data.append('name', txtName.val());
         data.append('description', txtDes.val());
-        data.append('classId', pageInfo.classId);     
+        data.append('classId', pageInfo.classId);
         data.append('pdf', filePdf[0].files[0]);
         data.append('type', constants.DOCUMENT.TYPE.PDF);
 
         btnEdit.attr('disabled', true);
-           
+
         $.ajax({
             type: "POST",
             url: '/documents',
@@ -247,7 +247,7 @@ function configEditDocumentPdf() {
             error: function () {
                 toastr.error('Có lỗi trong quá trình xử lý yêu cầu!');
                 btnEdit.attr('disabled', false);
-            }          
+            }
         });
     }
 
@@ -256,10 +256,10 @@ function configEditDocumentPdf() {
     });
 }
 
-function showEditDocumentArticle(data) {    
+function showEditDocumentArticle(data) {
     if (!data)
-        data ={};
-    const {name = '', description = '', content = '', _id } = data;
+        data = {};
+    const { name = '', description = '', content = '', _id } = data;
     $('#mdAddDocumenttxtName').val(name);
     $('#mdAddDocumenttxtDes').val(description);
     CKEDITOR.instances.txtDocContent.setData(content);
@@ -276,9 +276,9 @@ function showEditDocumentPdf(data) {
     const filePdf = modal.find('[name="pdf"]');
 
     if (!data)
-        data ={};
-    const {name = '', description = '', content = '', _id } = data;
-    
+        data = {};
+    const { name = '', description = '', content = '', _id } = data;
+
     txtId.val(_id);
     txtName.val(name);
     txtDes.val(description);
@@ -476,6 +476,136 @@ function configEditExerFillMissingWords() {
     });
 }
 
+function configSettingClass() {
+    const mainDiv = $('#divSettingClass');
+    const switchIsPublic = mainDiv.find('[name="isPublic"]');
+    const students = mainDiv.find('[name="students"]');
+    const divStudents = mainDiv.find('[name="divStudents"]');
+    const txtName = mainDiv.find('[name="name"]');
+    const txtDescription = mainDiv.find('[name="description"]');
+    const btnSave = mainDiv.find('[name="save"]');
+
+    function getUsers() {
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                type: "GET",
+                url: '/users',
+                success: function (data) {
+                    if (data.status && data.status == 200) {
+                        resolve(data.data);
+                    } else {
+                        reject('status failure');
+                    }
+                },
+                error: function (e) {
+                    reject(e)
+                },
+                dataType: 'json'
+            });
+        });
+    }
+
+    function changeDisplayOfStudents(isChecked) {
+        if (isChecked) {
+            divStudents.hide();
+        }
+        else {
+            divStudents.show();
+        }
+    }
+
+    async function init() {
+        switchIsPublic.bootstrapToggle();
+
+        switchIsPublic.change(function () {
+            const isChecked = $(this).prop('checked');
+            changeDisplayOfStudents(isChecked);
+        });
+
+        if (pageInfo.classType === constants.CLASS.TYPE.PUBLIC) {
+            switchIsPublic.bootstrapToggle('on');
+        }
+
+        students.select2({ dropdownAutoWidth: true });
+
+        try {
+            const users = await getUsers();
+            for (let user of users) {
+                const newOption = new Option(`${user.lastName} ${user.firstName} (${user.phoneNumber})`, user._id, false, false);
+                students.append(newOption).trigger('change');
+            }
+            students.val(pageInfo.classStudents.map(e => e._id));
+        }
+        catch (e) {
+            console.log(e);
+            toastr.error('Không thể lấy danh sách tài khoản!');
+        }
+    }
+
+    function edit(data) {     
+
+        return new Promise(function (resolve, reject) {
+            
+            $.ajax({
+                type: "POST",
+                url: '/classes/' + pageInfo.classId,
+                data: data,
+                success: function (data) {
+                    if (data.status && data.status == 200) {
+                        resolve(data.data);
+                    } else {
+                        reject('status failure');
+                    }
+                },
+                error: function (e) {
+                    reject(e);
+                },
+                dataType: 'json'
+            });
+        });
+    }
+
+    function configEvents() {
+
+        function validate(classData) {
+            if (!classData.name || (classData.name + '').trim() === '' || !classData.description || (classData.description + '').trim() === '')
+                return false;
+            return true;
+        }
+
+        btnSave.click(async function () {
+            btnSave.attr('disabled', true);
+            try {
+                const data = {
+                    students: students.val(),
+                    name: txtName.val(),
+                    description: txtDescription.val(),
+                    type: students.prop('checked') ? constants.CLASS.TYPE.PUBLIC : constants.CLASS.TYPE.PRIVATE
+                }
+    
+                if (!validate(data))
+                {               
+                    toastr.error('Dữ liệu chưa hợp lệ!');
+                    return;
+                }
+    
+                await edit(data);
+                toastr.success('Thao tác thành công!');
+            }
+            catch (e) {
+                console.log(e);
+                toastr.error('Có lỗi trong quá trình thực hiện yêu cầu!');
+            }
+            finally {
+                btnSave.attr('disabled', false);
+            }
+        })
+    }
+
+    init();
+    configEvents();
+}
+
 $(document).ready(function () {
     configEvents();
     getDocumentList();
@@ -484,4 +614,5 @@ $(document).ready(function () {
     configEditDocumentPdf();
     configEditExerListenAndRewrite();
     configEditExerFillMissingWords();
+    configSettingClass();
 })

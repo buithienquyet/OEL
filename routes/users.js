@@ -3,16 +3,33 @@ var router = express.Router();
 const User = require('../databases/mongodb/models/User');
 
 /* GET users listing. */
-router.get('/', async function(req, res, next) {
-    let user = new User();
-    user.userName = 'btq';
-    user.firstName = 'Quyet';
-    user.lastName = 'Bui';
-    user.password = '12345';
+router.get('/', async function (req, res, next) {
 
-    await user.save();
+    const data = {
+        status: 200,
+        data: null
+    }
 
-    res.send('ok');
+    try {
+        const users = await User.find({}, '_id firstName lastName phoneNumber');
+        for (let user of users) {
+            let newPhone = '';
+
+            for (let i = 0; i < user.phoneNumber.length; i++) {                
+                newPhone += (i<6?'*':user.phoneNumber.charAt(i));              
+            }
+
+            user.phoneNumber= newPhone;
+        }
+        data.data = users;
+    }
+    catch (e) {
+        console.error('get user list: ', e);
+        data.status = 500;
+    }
+    finally {
+        res.json(data);
+    }
 
 });
 
