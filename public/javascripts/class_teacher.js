@@ -392,7 +392,7 @@ function configEditExerListenAndRewrite() {
     });
 
     mainDiv.on('click', '.listen-and-rewrite-box button', function (e) {
-        $(e.target).parent().parent().parent()[0].removeChild($(e.target).parent().parent()[0]);
+        $(e.target).parent().parent().parent().parent()[0].removeChild($(e.target).parent().parent().parent()[0]);
     });
 
     btnAddExer.click(function () {
@@ -403,6 +403,12 @@ function configEditExerListenAndRewrite() {
         let formData = new FormData();
         let name = mainDiv.find('input[name="txt-name"]').val();
         let description = mainDiv.find('input[name="txt-des"]').val();
+
+        if (list.length===0)
+        {
+            toastr.error('Chưa có câu nào được tạo');
+            return;
+        }
 
         for (let item of list) {
             let text = $(item).find('input[type="text"]').val();

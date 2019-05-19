@@ -32,6 +32,7 @@
     "email" : "hdanh@gmail.com", 
     "address" : "Tân Lạc - Hòa Bình", 
     "createdDate" : ISODate("2019-05-07T01:02:32.389+0000"), 
+    "avatarUrl" : "default.png", 
     "__v" : NumberInt(0), 
     "phoneNumber" : "0334234233234"
 }
